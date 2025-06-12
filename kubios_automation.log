@@ -107,3 +107,18 @@
 2025-06-08 15:26:47,212 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
 2025-06-12 11:55:40,841 - INFO - Kubios is not running
 2025-06-12 11:55:40,842 - INFO - Starting Kubios
+2025-06-12 14:41:40,884 - INFO - Kubios is not running
+2025-06-12 14:41:40,885 - INFO - Starting Kubios
+2025-06-12 14:41:53,958 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 14:41:53,959 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 14:41:53,967 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 14:41:53,967 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 14:41:53,971 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-12 14:41:53,971 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-12 14:44:15,849 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 14:44:15,850 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 14:44:15,853 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-12 14:44:15,853 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-12 14:44:15,853 - INFO - Åbner EDF-fil C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\EDF_Files\ID1_baseline.edf
+2025-06-12 15:30:36,895 - INFO - Kubios is not running
+2025-06-12 15:30:36,895 - INFO - Starting Kubios

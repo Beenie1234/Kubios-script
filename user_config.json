@@ -1,0 +1,5 @@
+{
+  "kubios_path": "C:\\Program Files\\Kubios\\KubiosHRVScientific\\application\\launch_kubioshrv.exe",
+  "excel_path": "D:\\HRV_Project\\Files_to_analyze.xlsx",
+  "log_file": "D:\\HRV_Project\\logs\\kubios_automation.log"
+}
