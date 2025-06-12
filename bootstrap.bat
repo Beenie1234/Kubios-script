@@ -4,7 +4,8 @@ setlocal enabledelayedexpansion
 :: ----------------------------------------------------------------------------
 :: Bootstrap Script for Windows: Create and Populate a Python Virtual Environment
 :: Usage: Place this file in your project root and run from Command Prompt:
-::        bootstrap.bat
+::        bootstrap.bat [packages-to-install]
+:: E.g.: bootstrap.bat requests flask numpy
 :: ----------------------------------------------------------------------------
 
 :: 1) Determine Python interpreter (override by setting VENV_PYTHON env var)
@@ -35,12 +36,21 @@ call "%VENV_DIR%\Scripts\activate.bat"
 echo Upgrading pip, setuptools, and wheel...
 pip install --upgrade pip setuptools wheel
 
-:: 7) Install project dependencies if requirements.txt exists
-if exist "requirements.txt" (
-    echo Installing dependencies from requirements.txt...
-    pip install -r requirements.txt
+:: 7) Install dependencies
+:: Check if requirements.txt exists and is non-empty
+set "REQ_FILE=requirements.txt"
+set "REQ_SIZE=0"
+for %%I in (%REQ_FILE%) do set "REQ_SIZE=%%~zI"
+if exist "%REQ_FILE%" if %REQ_SIZE% gtr 0 (
+    echo Installing dependencies from %REQ_FILE%...
+    pip install -r %REQ_FILE%
+) else if "%*" neq "" (
+    echo No valid requirements.txt found, installing specified packages: %*
+    pip install %*
 ) else (
-    echo No requirements.txt found. Skipping dependency installation.
+    echo ERROR: No requirements.txt or packages specified to install.
+    echo Usage: bootstrap.bat [package1 package2 ...]
+    goto :EOF
 )
 
 echo.
