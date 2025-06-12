@@ -1,0 +1,107 @@
+2025-06-02 13:20:20,244 - INFO - Kubios is not running
+2025-06-02 13:20:20,245 - INFO - Starting Kubios
+2025-06-02 13:23:36,748 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-02 17:53:10,590 - INFO - No window found with the name 'kubioshrv'
+2025-06-02 17:53:24,172 - INFO - No window found with the name 'kubioshrv'
+2025-06-06 11:06:24,085 - INFO - Kubios is not running
+2025-06-06 11:06:24,086 - INFO - Starting Kubios
+2025-06-06 11:07:24,524 - INFO - Kubios has been started
+2025-06-07 12:49:01,536 - ERROR - No columns found in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx' in sheet 0
+2025-06-07 12:50:31,549 - ERROR - No columns found in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx' in sheet 0
+2025-06-07 12:54:31,255 - ERROR - No columns found in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx' in sheet 0
+2025-06-07 12:56:40,078 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 12:56:40,095 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 12:58:49,400 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 12:58:49,401 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 12:58:49,415 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 12:58:49,415 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:01:12,345 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:01:12,345 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:01:12,351 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:01:12,351 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:04:14,263 - ERROR - No columns found in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx' in sheet 0
+2025-06-07 13:11:29,160 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:11:29,160 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:11:29,170 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:11:29,170 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:11:54,833 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:11:54,833 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:11:54,838 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:11:54,839 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:23:29,832 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:23:29,832 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:23:29,837 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:23:29,837 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:23:29,838 - ERROR - No EDF-file found with name: 'ID1_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:23:29,838 - ERROR - No EDF-file found with name: 'ID3_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:23:29,838 - ERROR - No EDF-file found with name: 'ID9_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:23:29,838 - ERROR - No EDF-file found with name: 'ID9_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:23:29,838 - INFO - Found 0 existing EDF-files out of 4
+2025-06-07 13:24:27,115 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:24:27,115 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:24:27,121 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:24:27,121 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:24:27,122 - ERROR - No EDF-file found with name: 'ID1_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:24:27,122 - ERROR - No EDF-file found with name: 'ID3_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:24:27,122 - ERROR - No EDF-file found with name: 'ID9_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:24:27,122 - ERROR - No EDF-file found with name: 'ID9_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:24:27,122 - INFO - Found 0 existing EDF-files out of 4
+2025-06-07 13:28:19,846 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:28:19,847 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:28:19,852 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:28:19,852 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:28:38,806 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:28:38,807 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:28:38,814 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:28:38,815 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:28:38,815 - WARNING - No EDF-file found with name: 'ID1_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:28:38,815 - WARNING - No EDF-file found with name: 'ID3_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:28:38,816 - WARNING - No EDF-file found with name: 'ID9_baseline.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:28:38,816 - WARNING - No EDF-file found with name: 'ID9_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx'
+2025-06-07 13:28:38,816 - INFO - Found 0 existing EDF-files out of 4
+2025-06-07 13:29:37,933 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:29:37,934 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:29:37,939 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:29:37,939 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:29:37,941 - INFO - Found 4 existing EDF-files out of 4
+2025-06-07 13:30:01,236 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:30:01,236 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:30:01,242 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:30:01,242 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:30:01,244 - INFO - Found 4 existing EDF-files out of 4
+2025-06-07 13:31:33,516 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:31:33,516 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:31:33,522 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:31:33,522 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:31:33,525 - INFO - Found 4 existing EDF-files out of 4
+2025-06-07 13:31:54,018 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:31:54,019 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:31:54,025 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:31:54,025 - INFO - Loaded 4 EDF-files from column Unnamed: 0
+2025-06-07 13:31:54,027 - INFO - Found 4 existing EDF-files out of 4
+2025-06-07 13:49:22,707 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:49:22,707 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:49:22,712 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:49:22,713 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:49:22,716 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-07 13:49:22,716 - INFO - Found 4 existing EDF-files out of 5
+2025-06-07 13:51:37,213 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:51:37,214 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:51:37,219 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-07 13:51:37,220 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-07 13:51:37,223 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-07 13:51:37,223 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-08 13:52:42,372 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-08 13:52:42,374 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-08 13:52:42,399 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-08 13:52:42,400 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-08 13:52:42,417 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-08 13:52:42,418 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-08 13:53:07,454 - ERROR - Excel file C:\Users\cannon\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx does not exist
+2025-06-08 15:22:44,292 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-08 15:22:44,296 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-08 15:26:33,674 - ERROR - Excel file C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx may be open or used in another process
+2025-06-08 15:26:47,202 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-08 15:26:47,203 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-08 15:26:47,212 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze'. Make sure excel file is in the same directory EDF-files
+2025-06-08 15:26:47,212 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
