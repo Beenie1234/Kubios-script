@@ -8,7 +8,7 @@ import logging
 #Standard-config som fallback
 DEFAULTS = {
     "kubios_path": r'C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe',
-    "excel_path": str(Path(__file__).parent / "Files_to_analyze.xlsx"),
+    "excel_path": str(Path(__file__).parent.parent / "Files_to_analyze.xlsx"),
     "log_file": str(Path(__file__) / "kubios_automation.log")
 }
 

@@ -122,3 +122,29 @@
 2025-06-12 14:44:15,853 - INFO - Åbner EDF-fil C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\EDF_Files\ID1_baseline.edf
 2025-06-12 15:30:36,895 - INFO - Kubios is not running
 2025-06-12 15:30:36,895 - INFO - Starting Kubios
+2025-06-12 17:10:17,602 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:10:17,602 - ERROR - Excel file or path: C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\Files_to_analyze.xlsx does not exist
+2025-06-12 17:13:24,056 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:13:24,057 - ERROR - Excel file or path: C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\Files_to_analyze.xlsx does not exist
+2025-06-12 17:15:09,133 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:15:09,133 - ERROR - Excel file or path: C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\Files_to_analyze.xlsx does not exist
+2025-06-12 17:16:54,090 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:16:54,090 - ERROR - Excel file or path: C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\Files_to_analyze.xlsx does not exist
+2025-06-12 17:23:06,976 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:23:07,328 - INFO - Kubios is not running
+2025-06-12 17:23:07,328 - INFO - Attempting to start Kubios
+2025-06-12 17:24:23,738 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:24:23,738 - ERROR - Excel file or path: C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\Files_to_analyze.xlsx does not exist
+2025-06-12 17:25:24,104 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:25:24,317 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 17:25:24,318 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 17:25:24,324 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 17:25:24,325 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 17:25:24,441 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-12 17:25:24,442 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-12 17:26:56,119 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 17:26:56,463 - INFO - Kubios is not running
+2025-06-12 17:26:56,463 - INFO - Attempting to start Kubios
+2025-06-12 17:27:56,468 - INFO - Kubios has been started
+2025-06-12 17:27:56,482 - INFO - CLosing process: kubioshrv
+2025-06-12 17:28:01,492 - WARNING - No process found with the name 'kubioshrv'
