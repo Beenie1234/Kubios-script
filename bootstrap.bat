@@ -1,60 +1,68 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 
 :: ----------------------------------------------------------------------------
 :: Bootstrap Script for Windows: Create and Populate a Python Virtual Environment
-:: Usage: Place this file in your project root and run from Command Prompt:
-::        bootstrap.bat [packages-to-install]
-:: E.g.: bootstrap.bat requests flask numpy
+:: Place this file in your project root and run from Command Prompt:
+::    bootstrap.bat [pkg1 pkg2 …]
 :: ----------------------------------------------------------------------------
 
-:: 1) Determine Python interpreter (override by setting VENV_PYTHON env var)
+:: Change to script directory to avoid path issues
+pushd "%~dp0"
+
+:: 1) Choose Python interpreter (override by setting VENV_PYTHON)
 if defined VENV_PYTHON (
     set "PYTHON=%VENV_PYTHON%"
 ) else (
     set "PYTHON=python"
 )
 
-:: 2) Virtual environment directory
+:: 2) Virtual environment folder
 set "VENV_DIR=.venv"
 
-:: 3) Remove existing virtual environment if it exists
+:: 3) Remove any existing virtual environment
 if exist "%VENV_DIR%" (
     echo Deleting existing virtual environment "%VENV_DIR%"...
     rmdir /s /q "%VENV_DIR%"
 )
 
-:: 4) Create a new virtual environment
+:: 4) Create a fresh virtual environment
 echo Creating virtual environment using "%PYTHON%"...
 "%PYTHON%" -m venv "%VENV_DIR%"
 
-:: 5) Activate the virtual environment
-echo Activating virtual environment...
-call "%VENV_DIR%\Scripts\activate.bat"
+:: 5) Path to venv Python
+set "VENV_PY=%VENV_DIR%\Scripts\python.exe"
+echo Virtual environment interpreter: "%VENV_PY%"
 
-:: 6) Upgrade pip, setuptools, and wheel
+:: 6) Upgrade installer tools
 echo Upgrading pip, setuptools, and wheel...
-pip install --upgrade pip setuptools wheel
+"%VENV_PY%" -m pip install --upgrade pip setuptools wheel >nul
 
-:: 7) Install dependencies
-:: Check if requirements.txt exists and is non-empty
-set "REQ_FILE=requirements.txt"
-set "REQ_SIZE=0"
-for %%I in (%REQ_FILE%) do set "REQ_SIZE=%%~zI"
-if exist "%REQ_FILE%" if %REQ_SIZE% gtr 0 (
-    echo Installing dependencies from %REQ_FILE%...
-    pip install -r %REQ_FILE%
-) else if "%*" neq "" (
-    echo No valid requirements.txt found, installing specified packages: %*
-    pip install %*
+:: 7) Install dependencies from requirements.txt or arguments
+if exist "requirements.txt" (
+    echo Installing dependencies from requirements.txt...
+    "!VENV_PY!" -m pip install -r requirements.txt
+) else if not "%*"=="" (
+    echo Installing specified packages: %*
+    "!VENV_PY!" -m pip install %*
 ) else (
-    echo ERROR: No requirements.txt or packages specified to install.
-    echo Usage: bootstrap.bat [package1 package2 ...]
-    goto :EOF
+    echo ERROR: No requirements.txt and no packages specified.
+    echo Usage: bootstrap.bat [pkg1 pkg2 …]
+    popd
+    endlocal
+    exit /b 1
 )
+
+:: 8) Show installed packages for verification
+echo.
+echo Installed packages in %VENV_DIR%:
+"!VENV_PY!" -m pip list
+
+:: Return to original directory
+popd
 
 echo.
 echo ✅ Virtual environment ready in "%VENV_DIR%".
-echo To activate in a new session, run:
-echo    call "%VENV_DIR%\Scripts\activate.bat"
+echo To activate, run:
+echo    %VENV_DIR%\Scripts\activate.bat
 endlocal
