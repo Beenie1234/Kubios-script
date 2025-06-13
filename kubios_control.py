@@ -91,7 +91,7 @@ def open_kubios():
         logging.info(f"Path: {KUBIOS_PATH} does not exist")
         return False
 
-    logging.info(f"Starting Kubios")
+    logging.info(f"Attempting to start Kubios")
     try:
         subprocess.Popen([KUBIOS_PATH], stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
