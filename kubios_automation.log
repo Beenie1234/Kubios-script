@@ -158,3 +158,31 @@
 2025-06-12 18:32:37,925 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
 2025-06-12 18:32:38,357 - INFO - Kubios is not running
 2025-06-12 18:32:38,357 - INFO - Attempting to start Kubios
+2025-06-12 19:00:51,188 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 19:00:52,011 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 19:00:52,012 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 19:00:52,035 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-12 19:00:52,036 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-12 19:00:52,597 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-12 19:00:52,597 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-12 19:01:04,163 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-12 19:01:04,804 - INFO - Kubios is not running
+2025-06-12 19:01:04,804 - INFO - Attempting to start Kubios
+2025-06-12 19:02:04,886 - INFO - Kubios has been started
+2025-06-13 10:47:35,555 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-13 10:47:36,180 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 10:47:36,180 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 10:47:36,194 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 10:47:36,195 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 10:47:36,515 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 10:47:36,516 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-13 10:56:57,989 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-13 10:56:58,162 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 10:56:58,163 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 10:56:58,170 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 10:56:58,170 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 10:56:58,657 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 10:56:58,658 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-13 10:57:25,062 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
+2025-06-13 10:57:25,491 - INFO - Kubios is not running
+2025-06-13 10:57:25,496 - INFO - Attempting to start Kubios

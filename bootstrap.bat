@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 
 :: ----------------------------------------------------------------------------
 :: Bootstrap Script for Windows: Create and Populate a Python Virtual Environment
@@ -41,10 +41,10 @@ echo Upgrading pip, setuptools, and wheel...
 :: 7) Install dependencies from requirements.txt or arguments
 if exist "requirements.txt" (
     echo Installing dependencies from requirements.txt...
-    "!VENV_PY!" -m pip install -r requirements.txt
+    "%VENV_PY%" -m pip install -r requirements.txt
 ) else if not "%*"=="" (
     echo Installing specified packages: %*
-    "!VENV_PY!" -m pip install %*
+    "%VENV_PY%" -m pip install %*
 ) else (
     echo ERROR: No requirements.txt and no packages specified.
     echo Usage: bootstrap.bat [pkg1 pkg2 …]
@@ -56,7 +56,7 @@ if exist "requirements.txt" (
 :: 8) Show installed packages for verification
 echo.
 echo Installed packages in %VENV_DIR%:
-"!VENV_PY!" -m pip list
+"%VENV_PY%" -m pip list
 
 :: Return to original directory
 popd
