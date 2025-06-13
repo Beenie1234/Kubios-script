@@ -186,3 +186,93 @@
 2025-06-13 10:57:25,062 - ERROR - Failed to load config: Illegal trailing comma before end of object: line 2 column 80 (char 81)
 2025-06-13 10:57:25,491 - INFO - Kubios is not running
 2025-06-13 10:57:25,496 - INFO - Attempting to start Kubios
+2025-06-13 12:51:08,072 - INFO - Kubios is not running
+2025-06-13 12:51:08,072 - INFO - Path: C:\Program Files\Kubios\Kubios HRV Premium\kubioshrv.exe does not exist
+2025-06-13 12:51:08,658 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 12:51:08,659 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 12:55:52,074 - INFO - Kubios is not running
+2025-06-13 12:55:52,074 - INFO - Attempting to start Kubios
+2025-06-13 12:56:38,628 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 12:56:38,628 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 12:57:33,363 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 12:57:33,364 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 12:59:30,488 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 12:59:30,488 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 12:59:30,649 - WARNING - No EDF-file found with name: 'I' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:30,772 - WARNING - No EDF-file found with name: 'D' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:30,892 - WARNING - No EDF-file found with name: '1' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,038 - WARNING - No EDF-file found with name: '_' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,157 - WARNING - No EDF-file found with name: 'b' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,279 - WARNING - No EDF-file found with name: 'a' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,401 - WARNING - No EDF-file found with name: 's' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,530 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,647 - WARNING - No EDF-file found with name: 'l' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,773 - WARNING - No EDF-file found with name: 'i' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:31,891 - WARNING - No EDF-file found with name: 'n' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:32,011 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:32,251 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:32,368 - WARNING - No EDF-file found with name: 'd' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:32,482 - WARNING - No EDF-file found with name: 'f' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 12:59:32,482 - INFO - Found 1 existing EDF-files out of 16. ['I', 'D', '1', '_', 'b', 'a', 's', 'e', 'l', 'i', 'n', 'e', 'e', 'd', 'f'] could not be resolved.
+2025-06-13 13:01:45,231 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 13:01:45,232 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 13:01:45,362 - WARNING - No EDF-file found with name: 'I' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:45,493 - WARNING - No EDF-file found with name: 'D' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:45,623 - WARNING - No EDF-file found with name: '1' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:45,753 - WARNING - No EDF-file found with name: '_' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:45,884 - WARNING - No EDF-file found with name: 'b' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,015 - WARNING - No EDF-file found with name: 'a' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,141 - WARNING - No EDF-file found with name: 's' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,275 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,415 - WARNING - No EDF-file found with name: 'l' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,553 - WARNING - No EDF-file found with name: 'i' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,687 - WARNING - No EDF-file found with name: 'n' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:46,823 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:47,093 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:47,223 - WARNING - No EDF-file found with name: 'd' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:47,354 - WARNING - No EDF-file found with name: 'f' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:01:47,354 - INFO - Found 1 existing EDF-files out of 16. ['I', 'D', '1', '_', 'b', 'a', 's', 'e', 'l', 'i', 'n', 'e', 'e', 'd', 'f'] could not be resolved.
+2025-06-13 13:01:48,063 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-13 13:19:59,330 - ERROR - Failed to bring window to front: (-2146233079, None, (None, None, None, 0, None))
+2025-06-13 13:19:59,738 - INFO - Kubios window brought to front: 'Open Data File'
+2025-06-13 13:20:00,024 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 13:20:00,024 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 13:20:00,212 - WARNING - No EDF-file found with name: 'I' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,342 - WARNING - No EDF-file found with name: 'D' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,471 - WARNING - No EDF-file found with name: '1' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,603 - WARNING - No EDF-file found with name: '_' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,733 - WARNING - No EDF-file found with name: 'b' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,863 - WARNING - No EDF-file found with name: 'a' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:00,990 - WARNING - No EDF-file found with name: 's' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,120 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,257 - WARNING - No EDF-file found with name: 'l' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,385 - WARNING - No EDF-file found with name: 'i' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,518 - WARNING - No EDF-file found with name: 'n' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,651 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:01,960 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:02,136 - WARNING - No EDF-file found with name: 'd' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:02,299 - WARNING - No EDF-file found with name: 'f' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:02,299 - INFO - Found 1 existing EDF-files out of 16. ['I', 'D', '1', '_', 'b', 'a', 's', 'e', 'l', 'i', 'n', 'e', 'e', 'd', 'f'] could not be resolved.
+2025-06-13 13:20:02,299 - INFO - Åbner EDF-fil ID1_baseline.edf
+2025-06-13 13:20:07,372 - ERROR - Error opening EDF-fileCould not find 'top' in 'dict_keys([])'
+2025-06-13 13:20:28,662 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-13 13:20:28,908 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-13 13:20:28,908 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-13 13:20:29,030 - WARNING - No EDF-file found with name: 'I' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,152 - WARNING - No EDF-file found with name: 'D' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,275 - WARNING - No EDF-file found with name: '1' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,395 - WARNING - No EDF-file found with name: '_' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,530 - WARNING - No EDF-file found with name: 'b' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,652 - WARNING - No EDF-file found with name: 'a' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,777 - WARNING - No EDF-file found with name: 's' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:29,899 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,022 - WARNING - No EDF-file found with name: 'l' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,145 - WARNING - No EDF-file found with name: 'i' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,266 - WARNING - No EDF-file found with name: 'n' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,391 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,637 - WARNING - No EDF-file found with name: 'e' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,762 - WARNING - No EDF-file found with name: 'd' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,960 - WARNING - No EDF-file found with name: 'f' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation'. Make sure excel file is in the same directory EDF-files
+2025-06-13 13:20:30,960 - INFO - Found 1 existing EDF-files out of 16. ['I', 'D', '1', '_', 'b', 'a', 's', 'e', 'l', 'i', 'n', 'e', 'e', 'd', 'f'] could not be resolved.
+2025-06-13 13:20:30,960 - INFO - Åbner EDF-fil ID1_baseline.edf
+2025-06-13 13:20:36,001 - ERROR - Error opening EDF-fileCould not find 'top' in 'dict_keys(['Kubios HRV Scientific Lite 4.1.2.1', 'Dialog', 'Kubios HRV Scientific Lite 4.1.2.1Dialog'])'

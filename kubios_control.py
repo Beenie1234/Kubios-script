@@ -82,18 +82,18 @@ def bring_kubios_to_front(process_name=PROCESS_NAME, title_keyword=TITLE_KEYWORD
         return False
     return False
 
-def open_kubios():
+def open_kubios(kubios_path=KUBIOS_PATH):
     if is_kubios_running():
         logging.info("Kubios is already running")
         return bring_kubios_to_front()
 
-    if not os.path.exists(KUBIOS_PATH):
-        logging.info(f"Path: {KUBIOS_PATH} does not exist")
+    if not os.path.exists(kubios_path):
+        logging.info(f"Path: {kubios_path} does not exist")
         return False
 
     logging.info(f"Attempting to start Kubios")
     try:
-        subprocess.Popen([KUBIOS_PATH], stdin=subprocess.DEVNULL,
+        subprocess.Popen([kubios_path], stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         time.sleep(STARTUP_DELAY)
         logging.info("Kubios has been started")
