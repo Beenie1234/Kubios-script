@@ -1,37 +1,62 @@
 import logging
-from pywinauto.application import Application
 import time
-
-from pywinauto.findwindows import ElementNotFoundError
+from pathlib import Path
+import psutil
+import pyautogui
+from pywinauto import Application, Desktop
+from pywinauto.findwindows import find_windows
 
 from config import TITLE_KEYWORD, EXCEL_PATH, PROCESS_NAME
 from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
-
-def open_edf_file(app, edf_path):
-    #Åbner EDF-filen i Kubios via Pywinauto
-    logging.info(f"Åbner EDF-fil {edf_path}")
+def detect_analysis_error():
     try:
-        app.top.window().menu_select("File->Open")
+        error_windows = []
+        for win in Desktop(backend='uia').windows():
+            title = win.window_text()
+            if "error" in title.lower() and win.process_id() == get_pid_by_name(PROCESS_NAME):
+                logging.info(f"Detected error window in title: {title}")
+                win.set_focus()
+                time.sleep(0.3)
+                try:
+                    win.close()
+                    time.sleep(0.3)
+                    logging.info("Closing error window")
+                except Exception as e:
+                    logging.error(f"Could not close window {title} : {e}")
+                error_windows.append(title)
+
+        return bool(error_windows)
+    except Exception as e:
+        logging.info(f"Could not detect error window: {e}")
+        return False
+
+
+def open_edf_file(edf_path):
+    #Åbner EDF-filen i Kubios via PyAutoGui og fokuserer det med PyWinAuto
+    logging.info(f"Opening EDF file {edf_path}")
+    try:
+        app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+        app.top_window().set_focus()
+        time.sleep(4)
+
+        pyautogui.hotkey('ctrl', 'o')
+        time.sleep(4)
+        pyautogui.write(str(edf_path), interval=0.01)
         time.sleep(1)
-        open_dialog = app.window(title_re=".*Open.*")
-        open_dialog.child_window(auto_id="1148", control_type="Edit").set_edit_text(str(edf_path))
-        open_dialog.child_window(title="Open", auto_id="1", control_type="Button").click()
+        pyautogui.press('enter')
         time.sleep(3)
-    except (ElementNotFoundError, Exception, TimeoutError) as e:
-        logging.error(f"Error opening EDF-file{e}")
+    except Exception as e:
+        logging.error(f"Error opening EDF file: {e}")
         raise
 
 if __name__ == "__main__":
-    #open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
-    bring_kubios_to_front()
-    kubios_app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
-    edf_file_list = read_edf_list(EXCEL_PATH)
-    print(edf_file_list[0])
-    edf_file_path = resolve_edf_paths(EXCEL_PATH, edf_file_list[0])
-    print(edf_file_path)
-    open_edf_file(kubios_app, edf_file_list[0])
+
+    open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
+    edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
+    open_edf_file(edf_file_path[0])
+    detect_analysis_error()
 
 
 

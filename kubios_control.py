@@ -57,11 +57,13 @@ def bring_kubios_to_front(process_name=PROCESS_NAME, title_keyword=TITLE_KEYWORD
         for handle in window_handles:
             win = Desktop(backend="uia").window(handle=handle)
             title = win.window_text()
-
+            print(f"Title_keyword : {str(title_keyword)}")
+            print(f" title: {str(title)}")
             if title_keyword.lower() in title.lower():
                 matching_windows.append(win)
             else:
                 fallback_windows.append(win)
+                logging.info(f"Not able to find main window. Found window: {title}" )
 
         #Denne del af koden åbner Kubios
         for win in matching_windows + fallback_windows:
@@ -85,6 +87,7 @@ def bring_kubios_to_front(process_name=PROCESS_NAME, title_keyword=TITLE_KEYWORD
 def open_kubios(kubios_path=KUBIOS_PATH):
     if is_kubios_running():
         logging.info("Kubios is already running")
+        time.sleep(5)
         return bring_kubios_to_front()
 
     if not os.path.exists(kubios_path):
