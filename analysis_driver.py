@@ -1,5 +1,6 @@
 import logging
 import time
+
 from pathlib import Path
 import psutil
 import pyautogui
@@ -43,10 +44,10 @@ def open_edf_file(edf_path):
 
         pyautogui.hotkey('ctrl', 'o')
         time.sleep(4)
-        pyautogui.write(str(edf_path), interval=0.01)
+        pyautogui.write(str(edf_path), interval=0.015)
         time.sleep(1)
         pyautogui.press('enter')
-        time.sleep(3)
+        time.sleep(2)
     except Exception as e:
         logging.error(f"Error opening EDF file: {e}")
         raise
