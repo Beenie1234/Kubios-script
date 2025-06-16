@@ -1,6 +1,8 @@
 import logging
 import time
-
+import pytesseract
+from PIL import ImageGrab
+import re
 from pathlib import Path
 import psutil
 import pyautogui
@@ -53,7 +55,15 @@ def open_edf_file(edf_path):
         raise
 
 def read_time_and_length():
-    print("TEst")
+    logging.info("Starting to read time and length")
+    screenshot = ImageGrab.grab()
+
+    time_label = pyautogui.locateOnScreen("assets/images/time_label.png", confidence=0.8)
+    length_label = pyautogui.locateOnScreen("assets/images/time_label.png", confidence=0.8)
+    if time_label and length_label:
+        print("IMAGES FOUND")
+    else:
+        print("images could not be found")
 
 
 if __name__ == "__main__":
