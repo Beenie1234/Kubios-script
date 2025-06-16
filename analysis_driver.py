@@ -52,6 +52,10 @@ def open_edf_file(edf_path):
         logging.error(f"Error opening EDF file: {e}")
         raise
 
+def read_time_and_length():
+    print("TEst")
+
+
 if __name__ == "__main__":
 
     open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")

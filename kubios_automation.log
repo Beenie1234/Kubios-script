@@ -1673,3 +1673,24 @@
 2025-06-15 20:39:27,338 - INFO - Opening EDF file C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\EDF_Files\ID1_baseline.edf
 2025-06-15 20:39:41,219 - INFO - Detected error window in title: File open error
 2025-06-15 20:39:41,826 - INFO - Closing error window
+2025-06-16 14:15:18,375 - INFO - Kubios is running
+2025-06-16 14:15:18,381 - INFO - Kubios is already running
+2025-06-16 14:15:28,845 - INFO - Kubios is running
+2025-06-16 14:15:28,846 - INFO - Kubios is already running
+2025-06-16 14:15:34,473 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-16 14:21:31,493 - INFO - Kubios is running
+2025-06-16 14:21:31,494 - INFO - Kubios is already running
+2025-06-16 14:21:37,178 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-16 14:21:38,078 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-16 14:21:38,079 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-16 14:21:41,065 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny'. Make sure excel file is in the same directory EDF-files
+2025-06-16 14:21:41,065 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-16 14:21:41,066 - INFO - Opening EDF file C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\EDF_Files\ID1_baseline.edf
+2025-06-16 14:22:09,638 - INFO - Kubios is running
+2025-06-16 14:22:09,639 - INFO - Kubios is already running
+2025-06-16 14:22:15,361 - INFO - Kubios window brought to front: 'Kubios HRV Scientific Lite 4.1.2.1'
+2025-06-16 14:22:16,225 - INFO - Using column Unnamed: 0 as source for EDF-files
+2025-06-16 14:22:16,226 - INFO - Loaded 5 EDF-files from column Unnamed: 0
+2025-06-16 14:22:17,893 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny'. Make sure excel file is in the same directory EDF-files
+2025-06-16 14:22:17,894 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
+2025-06-16 14:22:17,894 - INFO - Opening EDF file C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\EDF_Files\ID1_baseline.edf
