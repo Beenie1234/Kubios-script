@@ -1694,3 +1694,50 @@
 2025-06-16 14:22:17,893 - WARNING - No EDF-file found with name: 'ID8_periop.edf' in 'C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny'. Make sure excel file is in the same directory EDF-files
 2025-06-16 14:22:17,894 - INFO - Found 4 existing EDF-files out of 5. ['ID8_periop.edf'] could not be resolved.
 2025-06-16 14:22:17,894 - INFO - Opening EDF file C:\Users\canno\OneDrive - University of Copenhagen\Arbejde\Programmeringsjob\kubios_automation\Kubios_ny\EDF_Files\ID1_baseline.edf
+2025-06-17 14:14:48,460 - INFO - Starting to read time and length
+2025-06-17 14:38:15,074 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 10:04:41,227 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 10:23:50,733 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 10:24:02,311 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 10:25:34,673 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 10:25:43,784 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:05:46,479 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:07:14,560 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:08:30,615 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:08:39,574 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:09:35,608 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:11:32,829 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:11:58,483 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:15:30,658 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:15:52,759 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:16:13,766 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:16:38,338 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:17:04,329 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:17:18,233 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:36:20,178 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:36:33,606 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:38:07,073 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:38:26,092 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:38:38,953 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:39:04,459 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:39:22,386 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:39:23,653 - INFO - Inverted image of length and time due to dark background
+2025-06-19 11:39:47,421 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:39:48,675 - INFO - Inverted image of length and time due to dark background
+2025-06-19 11:44:28,115 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:44:47,886 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:45:04,658 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:47:26,917 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:51:24,339 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:54:46,159 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:54:58,496 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:55:11,501 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 11:55:55,150 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:01:16,191 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:01:31,201 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:01:53,509 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:02:10,101 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:02:32,147 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:05:51,511 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:06:43,749 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 12:07:01,161 - INFO - Starting to read time and length with Tesseract-OCR
