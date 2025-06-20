@@ -1898,3 +1898,31 @@
 2025-06-20 16:28:17,606 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
 2025-06-20 16:28:40,384 - INFO - Starting to read time and length with Tesseract-OCR
 2025-06-20 16:28:42,496 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 18:02:00,161 - ERROR - Could not find start_sample_field: 
+2025-06-20 18:02:06,367 - ERROR - Could not find start_sample_field: 
+2025-06-20 18:03:34,191 - ERROR - Could not find start_sample_field: 
+2025-06-20 18:09:54,415 - INFO - Kubios is running
+2025-06-20 18:09:54,415 - INFO - Kubios is already running
+2025-06-20 18:09:59,564 - WARNING - No process found with the name 'kubioshrv'
+2025-06-20 18:10:00,139 - INFO - Using column File Name as source for EDF-files
+2025-06-20 18:10:00,140 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 18:10:01,052 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 18:10:01,052 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 18:10:06,063 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-06-20 18:11:16,406 - INFO - Kubios is not running
+2025-06-20 18:11:16,406 - INFO - Path: C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe does not exist
+2025-06-20 18:11:16,711 - INFO - Using column File Name as source for EDF-files
+2025-06-20 18:11:16,711 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 18:11:17,483 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 18:11:17,483 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 18:11:22,491 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-06-20 18:12:47,871 - INFO - Kubios is running
+2025-06-20 18:12:47,872 - INFO - Kubios is already running
+2025-06-20 18:12:53,356 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 18:12:53,785 - INFO - Using column File Name as source for EDF-files
+2025-06-20 18:12:53,785 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 18:12:54,688 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 18:12:54,688 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 18:13:17,498 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 18:13:19,682 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 18:31:56,774 - ERROR - Could not find start_sample_field: 

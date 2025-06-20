@@ -59,9 +59,7 @@ def open_edf_file(edf_path):
 def read_time_and_length():
     logging.info("Starting to read time and length with Tesseract-OCR")
     time.sleep(1)
-    screen_w, screen_h = pyautogui.size()
 
-    screenshot = ImageGrab.grab()
     try:
         time_label = pyautogui.locateOnScreen("assets/images/time_label.png", confidence=0.8)
         length_label = pyautogui.locateOnScreen("assets/images/length_label.png", confidence=0.8)
@@ -106,10 +104,7 @@ def read_time_and_length():
 
 
 def perform_read(read_all: bool, start_time: str = None, end_time: str = None):
-    def click_center_left(region):
-        x = region.left
-        y = region.top + region.height / 2
-        pyautogui.click(x, y)
+
 
     try:
         if read_all:
@@ -151,6 +146,10 @@ def perform_read(read_all: bool, start_time: str = None, end_time: str = None):
         return False
 
 
+def click_center_left(region):
+    x = region.left + region.width // 4
+    y = region.top + region.height // 2
+    pyautogui.click(x, y)
 
 if __name__ == "__main__":
 
