@@ -93,8 +93,7 @@ def read_time_and_length():
 
 
         try:
-            print(f"Time text: {time_text}")
-            print(f"Length text: {length_text}")
+            logging.info(f"Time: {time_region}. Length: {length_region}")
             return time_text, length_text
         except Exception as e:
             logging.error(f"Could not extract time text from image: {e}")
@@ -106,13 +105,61 @@ def read_time_and_length():
         return None, None
 
 
+def perform_read(read_all: bool, start_time: str = None, end_time: str = None):
+    def click_center_left(region):
+        x = region.left
+        y = region.top + region.height / 2
+        pyautogui.click(x, y)
+
+    try:
+        if read_all:
+            btn_img = "assets/images/read_all_blue.png"
+        else:
+            btn_img = "assets/images/read_part_button.png"
+        button = pyautogui.locateOnScreen(btn_img, confidence=0.8)
+        if not button:
+            raise RuntimeError(f"Could not find button: {button} in image: {btn_img}")
+        pyautogui.click(pyautogui.center(button))
+        time.sleep(2)
+
+
+
+    except Exception as e:
+        logging.error(f"Could not perform read: {e}")
+        return False
+
+    if not read_all:
+        if not start_time or not end_time:
+            logging.error("No start time or end time for analysis")
+            return False
+        try:
+            pyautogui.press('tab')
+            pyautogui.write(str(start_time), interval=0.05)
+            pyautogui.press('tab')
+            pyautogui.write(str(end_time), interval=0.05)
+        except Exception as e:
+           logging.error(f"Error when inputting time: {e}")
+    try:
+        ok_button = pyautogui.locateOnScreen("assets/images/ok_cancel_read_data_file.png", confidence=0.8)
+        if not ok_button:
+            raise RuntimeError(f"Could not find ok button: {ok_button} on screen")
+        click_center_left(ok_button)
+        time.sleep(0.5)
+        return True
+    except Exception as e:
+        logging.error(f"Could not perform read: {e}")
+        return False
+
+
+
 if __name__ == "__main__":
 
-    #open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
-    #edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
-    #open_edf_file(edf_file_path[0])
-    #detect_analysis_error()
-    time.sleep(4)
-    read_time_and_length()
+    open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
+    edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
+    open_edf_file(edf_file_path[0])
+    detect_analysis_error()
+    time.sleep(10)
+    print(read_time_and_length())
+    perform_read(True, "07:56:17", "80:00:00")
 
 

@@ -1741,3 +1741,160 @@
 2025-06-19 12:05:51,511 - INFO - Starting to read time and length with Tesseract-OCR
 2025-06-19 12:06:43,749 - INFO - Starting to read time and length with Tesseract-OCR
 2025-06-19 12:07:01,161 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:28:48,726 - INFO - Kubios is running
+2025-06-19 19:28:48,731 - INFO - Kubios is already running
+2025-06-19 19:28:54,168 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:28:54,690 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:28:54,690 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:28:55,910 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:28:55,910 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:29:12,722 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:29:30,554 - INFO - Kubios is running
+2025-06-19 19:29:30,555 - INFO - Kubios is already running
+2025-06-19 19:29:36,018 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:29:36,495 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:29:36,496 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:29:37,345 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:29:37,346 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:30:00,049 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:31:31,661 - INFO - Kubios is running
+2025-06-19 19:31:31,661 - INFO - Kubios is already running
+2025-06-19 19:31:37,134 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:31:37,589 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:31:37,589 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:31:38,427 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:31:38,427 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:32:01,147 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:33:10,845 - INFO - Kubios is running
+2025-06-19 19:33:10,845 - INFO - Kubios is already running
+2025-06-19 19:33:16,301 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:33:16,675 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:33:16,675 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:33:17,483 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:33:17,483 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:33:40,124 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:33:42,278 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 19:49:46,633 - INFO - Kubios is running
+2025-06-19 19:49:46,634 - INFO - Kubios is already running
+2025-06-19 19:49:51,657 - INFO - Not able to find main window. Found window: Reading Data File
+2025-06-19 19:49:52,078 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:49:52,489 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:49:52,489 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:49:53,330 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:49:53,330 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:50:16,134 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:50:18,328 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 19:50:18,508 - ERROR - Could not perform read: 
+2025-06-19 19:50:34,142 - INFO - Kubios is running
+2025-06-19 19:50:34,142 - INFO - Kubios is already running
+2025-06-19 19:50:39,580 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 19:50:40,042 - INFO - Using column File Name as source for EDF-files
+2025-06-19 19:50:40,043 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 19:50:40,926 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 19:50:40,926 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 19:51:03,680 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 19:51:05,799 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 20:02:17,316 - INFO - Kubios is running
+2025-06-19 20:02:17,317 - INFO - Kubios is already running
+2025-06-19 20:02:22,336 - INFO - Not able to find main window. Found window: Reading Data File
+2025-06-19 20:02:22,752 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 20:02:23,246 - INFO - Using column File Name as source for EDF-files
+2025-06-19 20:02:23,246 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 20:02:24,005 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 20:02:24,005 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 20:02:46,763 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 20:02:48,955 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 20:02:49,130 - ERROR - Could not perform read: 
+2025-06-19 20:03:08,008 - INFO - Kubios is running
+2025-06-19 20:03:08,009 - INFO - Kubios is already running
+2025-06-19 20:03:13,449 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 20:03:13,947 - INFO - Using column File Name as source for EDF-files
+2025-06-19 20:03:13,947 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 20:03:14,802 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 20:03:14,803 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 20:03:37,595 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 20:03:39,719 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 20:03:41,004 - ERROR - Could not perform read: 'str' object has no attribute 'left'
+2025-06-19 20:05:25,139 - INFO - Kubios is running
+2025-06-19 20:05:25,140 - INFO - Kubios is already running
+2025-06-19 20:05:30,585 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 20:05:31,032 - INFO - Using column File Name as source for EDF-files
+2025-06-19 20:05:31,032 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 20:05:31,940 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 20:05:31,940 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 20:05:54,735 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 20:05:56,810 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 20:05:59,081 - ERROR - Could not perform read: 'str' object has no attribute 'left'
+2025-06-19 20:07:19,954 - INFO - Kubios is running
+2025-06-19 20:07:19,955 - INFO - Kubios is already running
+2025-06-19 20:07:25,415 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 20:07:25,924 - INFO - Using column File Name as source for EDF-files
+2025-06-19 20:07:25,925 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 20:07:26,888 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 20:07:26,888 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 20:07:49,664 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 20:07:51,736 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-19 21:15:41,184 - INFO - Kubios is running
+2025-06-19 21:15:41,189 - INFO - Kubios is already running
+2025-06-19 21:15:46,647 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-19 21:15:47,112 - INFO - Using column File Name as source for EDF-files
+2025-06-19 21:15:47,113 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-19 21:15:48,082 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-19 21:15:48,082 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-19 21:16:10,896 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-19 21:16:13,035 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:11:52,338 - INFO - Kubios is running
+2025-06-20 16:11:52,343 - INFO - Kubios is already running
+2025-06-20 16:11:57,824 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:11:58,360 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:11:58,361 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:11:59,419 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:11:59,419 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:12:22,313 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:12:24,575 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:13:41,638 - INFO - Kubios is running
+2025-06-20 16:13:41,638 - INFO - Kubios is already running
+2025-06-20 16:13:47,080 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:13:47,484 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:13:47,484 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:13:48,309 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:13:48,310 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:14:11,114 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:14:13,271 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:24:32,208 - INFO - Kubios is running
+2025-06-20 16:24:32,209 - INFO - Kubios is already running
+2025-06-20 16:24:37,651 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:24:38,151 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:24:38,152 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:24:39,016 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:24:39,016 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:25:01,820 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:25:04,928 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:25:04,970 - ERROR - Could not perform read: Failed to read assets/images/read_part.png because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-20 16:25:37,004 - INFO - Kubios is running
+2025-06-20 16:25:37,004 - INFO - Kubios is already running
+2025-06-20 16:25:42,449 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:25:42,923 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:25:42,923 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:25:43,782 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:25:43,782 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:26:06,581 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:26:08,626 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:27:08,364 - INFO - Kubios is running
+2025-06-20 16:27:08,364 - INFO - Kubios is already running
+2025-06-20 16:27:13,823 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:27:14,281 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:27:14,281 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:27:15,052 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:27:15,052 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:27:37,789 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:27:39,948 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-06-20 16:28:10,807 - INFO - Kubios is running
+2025-06-20 16:28:10,808 - INFO - Kubios is already running
+2025-06-20 16:28:16,273 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-20 16:28:16,740 - INFO - Using column File Name as source for EDF-files
+2025-06-20 16:28:16,741 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-20 16:28:17,606 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-20 16:28:17,606 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-20 16:28:40,384 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-20 16:28:42,496 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
