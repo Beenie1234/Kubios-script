@@ -1926,3 +1926,20 @@
 2025-06-20 18:13:17,498 - INFO - Starting to read time and length with Tesseract-OCR
 2025-06-20 18:13:19,682 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
 2025-06-20 18:31:56,774 - ERROR - Could not find start_sample_field: 
+2025-06-22 19:04:19,215 - ERROR - Could not find start_sample_field: invalid literal for int() with base 10: ''
+2025-06-22 19:04:32,700 - ERROR - Could not find start_sample_field: invalid literal for int() with base 10: ''
+2025-06-22 19:04:42,075 - ERROR - Could not find start_sample_field: invalid literal for int() with base 10: '0.8 am'
+2025-06-22 19:07:15,096 - ERROR - Could not find start_sample_field: 
+2025-06-22 19:08:22,255 - ERROR - Could not find start_sample_field: 
+2025-06-22 19:23:52,528 - INFO - Region for assets/images/sample_int.png : 468, 412, 155, 17
+2025-06-22 19:24:08,358 - INFO - Region for assets/images/sample_int.png : 468, 412, 155, 17
+2025-06-22 19:25:01,753 - ERROR - Error: expected an image filename, OpenCV numpy array, or PIL image
+2025-06-22 19:25:27,209 - ERROR - Error: Failed to read Box(left=np.int64(468), top=np.int64(412), width=155, height=17) because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-22 19:25:45,023 - ERROR - Error: Failed to read (623, 412, 638, 429) because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-22 19:26:00,980 - ERROR - Error: expected an image filename, OpenCV numpy array, or PIL image
+2025-06-22 19:26:09,149 - ERROR - Error: expected an image filename, OpenCV numpy array, or PIL image
+2025-06-22 19:27:38,076 - INFO - Region for  : 623, 412, 638, 429
+2025-06-22 19:28:16,740 - INFO - Region for  : 623, 412, 638, 429
+2025-06-22 19:29:04,020 - INFO - Region for  : 643, 426, 658, 449
+2025-06-22 19:30:21,421 - ERROR - Error: debug_region() missing 3 required positional arguments: 'y', 'w', and 'h'
+2025-06-22 19:32:23,133 - ERROR - Error: expected an image filename, OpenCV numpy array, or PIL image

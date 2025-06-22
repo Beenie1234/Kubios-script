@@ -27,19 +27,34 @@ def add_sample(start_time: str, length: str):
         sample_region = (
             int(sample_int.left + sample_int.width),
             int(sample_int.top),
-            int(sample_int.left + sample_int.width + 100),
+            int(sample_int.left + sample_int.width + 15),
             int(sample_int.top + sample_int.height)
         )
         screenshot_sample = ImageGrab.grab(bbox=sample_region).convert('L')
         sample_text = pytesseract.image_to_string(screenshot_sample).strip()
         print(sample_region)
+        debug_region(sample_region)
         print(sample_text)
 
 
         #click_center_left(add_sample_btn)
     except Exception as e:
-        logging.error(f"Could not find start_sample_field: {e}")
+        logging.error(f"Error: {e}")
+        return None, None
 
+
+def debug_region(region, pause: float = 1):
+    try:
+        x, y, w, h = region
+        pyautogui.moveTo(x, y, duration = pause)
+        pyautogui.moveTo(x + w, y, duration = pause)
+        pyautogui.moveTo(x + w, y + h, duration = pause)
+        pyautogui.moveTo(x , y + h, duration = pause)
+        pyautogui.moveTo(x + w // 2, y + h // 2, duration = pause)
+        return True
+    except Exception as e:
+        logging.error(f"Error: {e}")
+        return None
 
 if __name__ == "__main__":
     time.sleep(3)
