@@ -1943,3 +1943,61 @@
 2025-06-22 19:29:04,020 - INFO - Region for  : 643, 426, 658, 449
 2025-06-22 19:30:21,421 - ERROR - Error: debug_region() missing 3 required positional arguments: 'y', 'w', and 'h'
 2025-06-22 19:32:23,133 - ERROR - Error: expected an image filename, OpenCV numpy array, or PIL image
+2025-06-23 12:17:23,861 - ERROR - Error: 
+2025-06-23 12:17:36,124 - ERROR - Error: 
+2025-06-23 12:45:16,594 - ERROR - Error: 
+2025-06-23 12:47:29,042 - ERROR - Error: 
+2025-06-23 12:51:45,121 - ERROR - Error: 
+2025-06-23 12:51:56,424 - ERROR - Error: 
+2025-06-23 12:52:53,796 - ERROR - Error: 
+2025-06-23 12:55:16,936 - ERROR - Error: 
+2025-06-23 12:59:42,673 - ERROR - Error: 
+2025-06-23 13:00:16,545 - ERROR - Error: 
+2025-06-23 13:01:03,533 - ERROR - Error: 
+2025-06-23 13:02:20,352 - ERROR - Error: 
+2025-06-23 13:25:57,480 - ERROR - Error: 
+2025-06-23 13:26:40,290 - ERROR - Error: 
+2025-06-23 13:27:23,451 - ERROR - Error: 
+2025-06-23 13:27:49,812 - ERROR - Error: 
+2025-06-23 13:28:58,511 - ERROR - Error: 
+2025-06-23 13:45:54,948 - ERROR - Error: 
+2025-06-23 13:56:35,169 - ERROR - Error: 
+2025-06-23 13:57:53,310 - ERROR - Error: 
+2025-06-23 13:58:04,673 - ERROR - Error: 
+2025-06-23 13:58:39,912 - ERROR - Error: 
+2025-06-23 13:59:21,015 - ERROR - Error: tile cannot extend outside image
+2025-06-23 13:59:29,012 - ERROR - Error: tile cannot extend outside image
+2025-06-23 14:00:03,229 - ERROR - Error: 
+2025-06-23 14:00:17,352 - ERROR - Error: 
+2025-06-23 14:00:35,441 - ERROR - Error: 
+2025-06-23 14:05:07,275 - ERROR - Error: 
+2025-06-23 14:09:40,833 - ERROR - Error: Failed to read assets/images/sample_it.png because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-23 14:10:01,460 - ERROR - Error: 
+2025-06-23 14:13:04,081 - ERROR - Error: 
+2025-06-23 14:15:48,255 - ERROR - Error: 
+2025-06-23 14:16:38,086 - ERROR - Error: 
+2025-06-23 14:28:08,788 - ERROR - Error: 
+2025-06-23 14:34:01,540 - ERROR - Error: 
+2025-06-23 17:17:41,026 - ERROR - Error: The confidence keyword argument is only available if OpenCV is installed.
+2025-06-23 17:19:10,365 - ERROR - Error: 
+2025-06-23 17:19:21,682 - ERROR - Error: 
+2025-06-23 17:20:43,693 - ERROR - Error: 
+2025-06-23 17:24:41,944 - ERROR - Error: 
+2025-06-23 18:03:22,938 - ERROR - No add sample button
+2025-06-23 18:07:58,718 - ERROR - No start_sample_field.png found
+2025-06-23 18:09:51,590 - ERROR - No start_sample_field.png found
+2025-06-23 18:16:52,356 - ERROR - No add_remove_sample.png found
+2025-06-24 11:14:30,165 - ERROR - No start_sample_field.png found
+2025-06-24 11:19:57,569 - ERROR - No add_remove_sample.png found
+2025-06-24 11:20:07,641 - ERROR - No add_remove_sample.png found
+2025-06-24 11:32:50,321 - ERROR - Error: Failed to read assets/images/add_remove_sample.pngassets/images/add_remove_sample_marked.pngassets/images/add_remove_sample_blue.png because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-24 11:41:45,535 - ERROR - No start_sample_field.png found
+2025-06-24 11:50:05,388 - ERROR - No add_remove_sample.png found
+2025-06-24 11:51:19,836 - ERROR - No add_remove_sample.png found
+2025-06-24 11:51:33,057 - ERROR - No add_remove_sample.png found
+2025-06-24 11:53:59,569 - ERROR - No add_remove_sample.png found
+2025-06-24 11:54:47,448 - ERROR - No add_remove_sample.png found
+2025-06-24 11:56:57,934 - ERROR - No add_remove_sample.png found
+2025-06-24 12:00:35,765 - ERROR - No add_remove_sample.png found
+2025-06-24 12:00:54,605 - ERROR - No add_remove_sample.png found
+2025-06-24 12:01:15,067 - ERROR - No add_remove_sample.png found

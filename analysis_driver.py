@@ -151,6 +151,10 @@ def click_center_left(region):
     y = region.top + region.height // 2
     pyautogui.click(x, y)
 
+def click_right_of(region):
+    x = region.left + region.width // 2 + region.width // 4
+    y = region.top + region.height // 2
+    pyautgui.click
 if __name__ == "__main__":
 
     open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
