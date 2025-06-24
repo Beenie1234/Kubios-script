@@ -2001,3 +2001,96 @@
 2025-06-24 12:00:35,765 - ERROR - No add_remove_sample.png found
 2025-06-24 12:00:54,605 - ERROR - No add_remove_sample.png found
 2025-06-24 12:01:15,067 - ERROR - No add_remove_sample.png found
+2025-06-24 12:20:36,383 - ERROR - Error: 'str' object cannot be interpreted as an integer
+2025-06-24 12:26:49,696 - ERROR - No add_remove_sample.png found
+2025-06-24 12:35:44,709 - ERROR - No add_remove_sample.png found
+2025-06-24 12:35:45,095 - ERROR - Failed to press add-button: 
+2025-06-24 12:38:49,695 - ERROR - No add_remove_sample.png found
+2025-06-24 12:44:27,468 - ERROR - No add_remove_sample.png found
+2025-06-24 12:44:28,041 - ERROR - Failed to press add-button: 
+2025-06-24 12:44:38,547 - ERROR - No add_remove_sample.png found
+2025-06-24 12:44:39,110 - ERROR - Failed to press add-button: 
+2025-06-24 13:21:52,602 - ERROR - No add_remove_sample.png found
+2025-06-24 13:21:53,683 - ERROR - Failed to press add-button: 
+2025-06-24 13:34:51,853 - ERROR - No add_remove_sample.png found
+2025-06-24 13:34:52,920 - ERROR - Failed to press add-button: 
+2025-06-24 13:36:57,340 - ERROR - No add_remove_sample.png found
+2025-06-24 13:36:58,422 - ERROR - Failed to press add-button: 
+2025-06-24 13:37:10,157 - ERROR - No add_remove_sample.png found
+2025-06-24 13:37:10,376 - ERROR - No add_remove_sample.png found
+2025-06-24 13:37:10,600 - ERROR - No add_remove_sample.png found
+2025-06-24 13:37:10,894 - ERROR - OCR could not recognize a valid number in the sample region
+2025-06-24 13:37:42,234 - ERROR - No add_remove_sample.png found
+2025-06-24 13:37:43,923 - ERROR - Failed to press add-button: 
+2025-06-24 13:39:07,103 - ERROR - No add_remove_sample.png found
+2025-06-24 13:39:08,839 - ERROR - Failed to press add-button: 
+2025-06-24 13:43:19,426 - ERROR - No add_remove_sample.png found
+2025-06-24 13:43:21,260 - ERROR - Failed to press add-button: 
+2025-06-24 13:44:24,906 - ERROR - No assets/images/add_remove_sample.png found
+2025-06-24 13:44:26,493 - ERROR - Failed to press add-button: 
+2025-06-24 14:49:53,473 - ERROR - No assets/images/add_remove_sample.png found
+2025-06-24 14:49:54,712 - ERROR - Failed to press add-button: 
+2025-06-24 15:22:04,393 - ERROR - Error: Could not find any add sample button
+2025-06-24 15:23:10,779 - ERROR - Error: Could not find any add sample button
+2025-06-24 15:24:10,882 - ERROR - Error: Could not find any add sample button
+2025-06-24 15:25:58,836 - ERROR - Error: Could not find any add sample button
+2025-06-24 15:42:50,698 - ERROR - Error: 
+2025-06-24 15:46:31,795 - ERROR - Error: Failed to read assets/images/length_field.png because file is missing, has improper permissions, or is an unsupported or invalid format
+2025-06-24 15:53:26,274 - ERROR - Error: 
+2025-06-24 15:55:40,488 - ERROR - Error: 
+2025-06-24 16:01:07,891 - ERROR - Error: 
+2025-06-24 16:01:11,730 - ERROR - Error: 
+2025-06-24 16:03:19,281 - ERROR - Error: 
+2025-06-24 16:03:24,128 - ERROR - Error: 
+2025-06-24 16:04:42,186 - ERROR - Error: 
+2025-06-24 16:04:47,031 - ERROR - Error: 
+2025-06-24 16:05:28,981 - ERROR - Error: 
+2025-06-24 16:05:33,826 - ERROR - Error: 
+2025-06-24 16:21:05,655 - ERROR - Error: 
+2025-06-24 16:21:10,493 - ERROR - Error: 
+2025-06-24 16:22:49,797 - ERROR - Error: 
+2025-06-24 16:22:54,634 - ERROR - Error: 
+2025-06-24 16:26:44,312 - ERROR - Error: 
+2025-06-24 16:28:31,931 - ERROR - Error in add_sample function: 
+2025-06-24 16:28:36,768 - ERROR - Error in add_sample function: 
+2025-06-24 16:47:08,247 - ERROR - Error in add_sample function: 
+2025-06-24 16:48:42,927 - ERROR - Error in add_sample function: 
+2025-06-24 16:48:47,758 - ERROR - Error in add_sample function: 
+2025-06-24 16:50:48,408 - ERROR - Error in add_sample function: 
+2025-06-24 16:50:54,232 - ERROR - Error in add_sample function: 
+2025-06-24 16:51:46,693 - ERROR - Error in add_sample function: 
+2025-06-24 16:51:52,520 - ERROR - Error in add_sample function: 
+2025-06-24 16:52:29,092 - ERROR - Error in add_sample function: 
+2025-06-24 16:52:34,920 - ERROR - Error in add_sample function: 
+2025-06-24 16:53:25,960 - ERROR - Error in add_sample function: 
+2025-06-24 16:53:31,789 - ERROR - Error in add_sample function: 
+2025-06-24 16:55:28,325 - ERROR - Error in add_sample function: 
+2025-06-24 16:55:34,163 - ERROR - Error in add_sample function: 
+2025-06-24 16:56:21,770 - ERROR - Error in add_sample function: 
+2025-06-24 16:56:27,603 - ERROR - Error in add_sample function: 
+2025-06-24 16:57:07,925 - ERROR - Error in add_sample function: 
+2025-06-24 16:59:52,401 - ERROR - Error in add_sample function: 
+2025-06-24 17:01:18,339 - ERROR - Error in add_sample function: 
+2025-06-24 17:01:24,178 - ERROR - Could not find start field image
+2025-06-24 17:01:24,178 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:03:09,867 - ERROR - Error in add_sample function: 
+2025-06-24 17:03:15,699 - ERROR - Could not find start field image
+2025-06-24 17:03:15,699 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:18:05,637 - ERROR - Error in add_sample function: 
+2025-06-24 17:18:11,477 - ERROR - Could not find start field image
+2025-06-24 17:18:11,477 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:19:22,693 - ERROR - Error in add_sample function: 
+2025-06-24 17:19:28,546 - ERROR - Could not find start field image
+2025-06-24 17:19:28,546 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:20:48,123 - ERROR - Error in add_sample function: 
+2025-06-24 17:20:53,963 - ERROR - Could not find start field image
+2025-06-24 17:20:53,963 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:22:16,142 - ERROR - Error in add_sample function: 
+2025-06-24 17:22:21,980 - ERROR - Could not find start field image
+2025-06-24 17:22:21,981 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:23:26,364 - ERROR - Error in add_sample function: 
+2025-06-24 17:23:32,198 - ERROR - Could not find start field image
+2025-06-24 17:23:32,198 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-24 17:26:13,571 - ERROR - Error in add_sample function: 
+2025-06-24 17:27:58,679 - ERROR - Error in add_sample function: 
+2025-06-24 17:31:16,243 - ERROR - Error in add_sample function: 

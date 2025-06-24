@@ -149,12 +149,29 @@ def perform_read(read_all: bool, start_time: str = None, end_time: str = None):
 def click_center_left(region):
     x = region.left + region.width // 4
     y = region.top + region.height // 2
+    pyautogui.moveTo(x, y)
+    time.sleep(1)
     pyautogui.click(x, y)
 
 def click_right_of(region):
-    x = region.left + region.width // 2 + region.width // 4
+    x = region.left + region.width  + 15
     y = region.top + region.height // 2
-    pyautgui.click
+    pyautogui.moveTo(x, y)
+    time.sleep(0.5)
+    pyautogui.click(x, y)
+
+def click_right_upper(region):
+    x = region.left + region.width + 15
+    y = region.top + region.height // 4
+    pyautogui.click(x, y)
+
+def click_right_lower(region):
+    x = region.left + region.width + 15
+    y = region.top + region.height - region.height // 4
+    pyautogui.click(x, y)
+
+
+
 if __name__ == "__main__":
 
     open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
