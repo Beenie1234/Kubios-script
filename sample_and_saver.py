@@ -6,7 +6,7 @@ import traceback
 import pytesseract
 from PIL import ImageGrab, ImageOps
 
-from analysis_driver import click_center_left, click_right_of
+from analysis_driver import click_center_left, click_right_of, click_right_upper
 
 
 def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int,
@@ -52,7 +52,7 @@ def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int
         time.sleep(0.2)
         pyautogui.hotkey("ctrl", "a")
         time.sleep(0.1)
-        pyautogui.write(start_time)
+        pyautogui.write(start_time, interval=0.01)
         time.sleep(1)
 
         try:
@@ -68,7 +68,7 @@ def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int
         time.sleep(0.2)
         pyautogui.hotkey("ctrl", "a")
         time.sleep(0.1)
-        pyautogui.write(length_time)
+        pyautogui.write(length_time, interval=0.01)
 
 
 
@@ -102,12 +102,49 @@ def debug_region(region, pause: float = 1):
     except Exception as e:
         logging.error(f"Error in debug_region: {e}")
         return None
+def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/images/save_dialog_save_cancel.png", save_dialog_dir_img: str = "assets/images/save_as_dir_box.png", filename_img: str = "assets/images/save_dialog_filename.png"):
+
+    try:
+        pyautogui.hotkey("ctrl", "s")
+        time.sleep(5)
+        path_field = pyautogui.locateOnScreen(save_dialog_dir_img, confidence=0.8)
+        if not path_field:
+            raise RuntimeError(f"Could not find directory field in save dialog")
+        click_center_left(path_field)
+        time.sleep(0.2)
+        pyautogui.hotkey("ctrl", "a")
+        time.sleep(0.2)
+        pyautogui.write(save_dir, interval=0.01)
+        filename_field = pyautogui.locateOnScreen(filename_img, confidence=0.8)
+        if not filename_field:
+            raise RuntimeError(f"Could not find filename field")
+        time.sleep(0.2)
+        click_right_upper(filename_field)
+        time.sleep(0.2)
+        pyautogui.hotkey("ctrl", "a")
+        time.sleep(0.2)
+        pyautogui.write(filename, interval=0.01)
+        time.sleep(0.2)
+        save_cancel_btn = pyautogui.locateOnScreen(save_cancel_img, confidence=0.8)
+        if not save_cancel_btn:
+            raise RuntimeError(f"Could not find save cancel button")
+        time.sleep(0.2)
+        click_center_left(save_cancel_btn)
+        time.sleep(3)
+        print("Results saved")
+        return True
+    except Exception as e:
+        logging.error(f"Error in save_results function: {e}")
+        return False
+
+
 
 if __name__ == "__main__":
     time.sleep(3)
+    save_results(r"C:\Users\Mikkel\Desktop\Sven\Test output", "Beenie")
 
-    #add_sample(str(f"38:57:01"), "02:00:00", 3)
-    i = 1
+
+    """i = 1
     while i < 4:
         add_sample(str(f"{i-1}8:57:01"), "02:00:00", i)
-        i+=1
+        i+=1"""

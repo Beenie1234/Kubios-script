@@ -163,6 +163,7 @@ def click_right_of(region):
 def click_right_upper(region):
     x = region.left + region.width + 15
     y = region.top + region.height // 4
+    time.sleep(0.3)
     pyautogui.click(x, y)
 
 def click_right_lower(region):
