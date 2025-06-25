@@ -106,8 +106,9 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
 
     try:
         pyautogui.hotkey("ctrl", "s")
-        time.sleep(5)
+        time.sleep(15)
         path_field = pyautogui.locateOnScreen(save_dialog_dir_img, confidence=0.8)
+        time.sleep(0.5)
         if not path_field:
             raise RuntimeError(f"Could not find directory field in save dialog")
         click_center_left(path_field)
@@ -116,6 +117,7 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
         time.sleep(0.2)
         pyautogui.write(save_dir, interval=0.01)
         filename_field = pyautogui.locateOnScreen(filename_img, confidence=0.8)
+        time.sleep(0.5)
         if not filename_field:
             raise RuntimeError(f"Could not find filename field")
         time.sleep(0.2)
@@ -141,10 +143,12 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
 
 if __name__ == "__main__":
     time.sleep(3)
-    save_results(r"C:\Users\Mikkel\Desktop\Sven\Test output", "Beenie")
 
 
-    """i = 1
+    i = 1
     while i < 4:
         add_sample(str(f"{i-1}8:57:01"), "02:00:00", i)
-        i+=1"""
+        i+=1
+
+    time.sleep(3)
+    save_results(r"C:\Users\Mikkel\Desktop\Sven\Test output", "Beenie")
