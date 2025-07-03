@@ -2105,3 +2105,39 @@
 2025-06-25 12:43:23,968 - ERROR - Error in add_sample function: 
 2025-06-25 12:43:59,499 - ERROR - Error in save_results function: 
 2025-06-25 12:46:44,487 - ERROR - Error in add_sample function: 
+2025-06-25 17:01:32,300 - ERROR - Error in add_sample function: 
+2025-06-30 18:04:36,233 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:04:44,346 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:04:52,590 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:08:26,684 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:08:34,788 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:08:43,027 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:09:01,237 - ERROR - Error in save_results function: 
+2025-06-30 18:11:32,969 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:11:41,367 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:11:49,600 - ERROR - Could not find sample tag
+2025-06-30 18:11:49,600 - ERROR - Error in add_sample function: Could not find sample tag
+2025-06-30 18:25:24,758 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-06-30 18:25:27,587 - ERROR - Could not find start field image
+2025-06-30 18:25:27,587 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-30 18:25:30,133 - ERROR - Could not find start field image
+2025-06-30 18:25:30,133 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-30 18:25:49,194 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:25:57,795 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:26:06,518 - ERROR - Error in add_sample function: 'Point' object has no attribute 'left'
+2025-06-30 18:26:24,720 - ERROR - Error in save_results function: 
+2025-06-30 18:28:26,547 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-06-30 18:28:26,975 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-06-30 18:28:29,531 - ERROR - Could not find start field image
+2025-06-30 18:28:29,531 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-06-30 18:29:27,539 - ERROR - Error in save_results function: 
+2025-06-30 18:48:05,361 - INFO - Kubios is running
+2025-06-30 18:48:05,361 - INFO - Kubios is already running
+2025-06-30 18:48:10,795 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-06-30 18:48:11,068 - INFO - Using column File Name as source for EDF-files
+2025-06-30 18:48:11,069 - INFO - Loaded 4 EDF-files from column File Name
+2025-06-30 18:48:11,578 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-06-30 18:48:11,578 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-06-30 18:48:34,283 - INFO - Starting to read time and length with Tesseract-OCR
+2025-06-30 18:48:36,380 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-03 17:37:04,056 - ERROR - Error in save_results function: 

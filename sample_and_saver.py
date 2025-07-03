@@ -9,7 +9,7 @@ from PIL import ImageGrab, ImageOps
 from analysis_driver import click_center_left, click_right_of, click_right_upper
 
 
-def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int,
+def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int, sample_name: str,
                add_btn_imgs=None,
                start_field_img="assets/images/start_sample_field.png",
                length_field_img="assets/images/length_sample_field.png",
@@ -72,15 +72,38 @@ def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int
 
 
 
-        ok_cancel_btn = pyautogui.locateOnScreen(ok_cancel_img, confidence=0.8)
-        if not ok_cancel_btn:
-            logging.error("Could not find ok cancel button")
-            raise RuntimeError(f"Could not find ok cancel button: {ok_cancel_img}")
 
         if sample_number_in_sequence > 1:
+            ok_cancel_btn = pyautogui.locateOnScreen(ok_cancel_img, confidence=0.8)
+            if not ok_cancel_btn:
+                logging.error("Could not find ok cancel button")
+                raise RuntimeError(f"Could not find ok cancel button: {ok_cancel_img}")
+
             time.sleep(0.2)
             click_center_left(ok_cancel_btn)
             time.sleep(0.2)
+
+        try:
+            sample_tag = pyautogui.locateOnScreen("assets/images/color_label.png", confidence=0.8)
+            print("sample tag found")
+        except pyautogui.ImageNotFoundException:
+            logging.error("Could not find sample tag")
+            print("Could not find sample tag")
+            raise RuntimeError(f"Could not find sample tag")
+        if not sample_tag:
+            logging.error("Could not find sample tag")
+            print("Could not find sample tag")
+            raise RuntimeError(f"Could not find sample tag: {sample_tag}")
+        time.sleep(0.5)
+        click_right_of(sample_tag)
+        time.sleep(0.5)
+        pyautogui.hotkey("ctrl", "a")
+        time.sleep(0.5)
+        pyautogui.write(sample_name, interval=0.01)
+        time.sleep(0.5)
+
+
+
 
         return True
     except Exception as e:
@@ -147,7 +170,7 @@ if __name__ == "__main__":
 
     i = 1
     while i < 4:
-        add_sample(str(f"{i-1}8:57:01"), "02:00:00", i)
+        add_sample(str(f"{i-1}8:57:01"), "02:00:00", i, f"sample {i}")
         i+=1
 
     time.sleep(3)

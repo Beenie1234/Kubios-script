@@ -13,12 +13,12 @@ from config import TITLE_KEYWORD, EXCEL_PATH, PROCESS_NAME
 from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
-def detect_analysis_error():
+def detect_analysis_error(error_title: str):
     try:
         error_windows = []
         for win in Desktop(backend='uia').windows():
             title = win.window_text()
-            if "error" in title.lower() and win.process_id() == get_pid_by_name(PROCESS_NAME):
+            if error_title in title.lower() and win.process_id() == get_pid_by_name(PROCESS_NAME):
                 logging.info(f"Detected error window in title: {title}")
                 win.set_focus()
                 time.sleep(0.3)
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
     edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
     open_edf_file(edf_file_path[0])
-    detect_analysis_error()
+    detect_analysis_error("error")
     time.sleep(10)
     print(read_time_and_length())
     perform_read(True, "07:56:17", "80:00:00")
