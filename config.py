@@ -18,6 +18,16 @@ LOG_FILE ='kubios_automation.log'
 PROCESS_NAME = "kubioshrv"
 TITLE_KEYWORD = "Kubios"
 
+DAY_INTERVALS = [
+    ("dag", 7, 15),
+    ("aften", 15, 23),
+    ("nat", 23, 7)
+]
+MAX_READ_LENGTH = 80
+MAX_READ_LENGTH_SPLIT = 60
+MAX_SAMPLES_PER_FILE = 15
+
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',

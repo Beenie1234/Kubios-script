@@ -2141,3 +2141,4 @@
 2025-06-30 18:48:34,283 - INFO - Starting to read time and length with Tesseract-OCR
 2025-06-30 18:48:36,380 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
 2025-07-03 17:37:04,056 - ERROR - Error in save_results function: 
+2025-07-05 17:16:09,108 - ERROR - Error in save_results function: 
