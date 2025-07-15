@@ -1,11 +1,10 @@
 from datetime import timedelta
 from typing import List, Dict, Any, Tuple
+import logging
 
-DEFAULT_INTERVALS = [
-    ("dag", 7, 15),
-    ("aften", 15, 23),
-    ("nat", 23, 7)
-]
+from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE
+
+DEFAULT_INTERVALS = DAY_INTERVALS
 
 
 def parse_duration(duration_str: str) -> timedelta:
@@ -38,7 +37,9 @@ def interval_label(hour: int, intervals=None) -> str:
         else:  # fx nat (23-7)
             if hour >= start or hour < end:
                 return label
+    logging.error("Error in interval_label function in analysis_logic.py")
     return "ukendt"
+
 
 
 def next_interval_end(current_time: timedelta, intervals=None) -> timedelta:
@@ -70,10 +71,11 @@ def split_samples(
         start_time: str,
         duration_str: str,
         patient_id: str,
-        max_samples_per_file: int = 15,
+        max_samples_per_file: int = MAX_SAMPLES_PER_FILE,
         intervals: List[Tuple[str, int, int]] = None,
         sample_windows: List[Tuple[str, str]] = None
 ) -> List[Dict[str, Any]]:
+    logging.info(f"Splitting samples fpr {patient_id} with start time={start_time} and duration={duration_str}")
     """
     Fleksibel split: Hvis sample_windows er angivet, laves samples præcis efter windows, uanset overlap/spring.
     Output er relativ tid fra optagelsens start samt længde, ikke absolut tidspunkt.
@@ -86,6 +88,7 @@ def split_samples(
     idx = 1
 
     if sample_windows:
+        logging.info(f"Using custom intervals: {sample_windows}")
         total_days = int(((duration_td + start_offset).total_seconds() // (24 * 3600))) + 1
         for day in range(total_days):
             for w_start, w_end in sample_windows:
@@ -102,12 +105,16 @@ def split_samples(
                     sample_end = start_offset + (window_end - start_offset)
                 # Begræns til optagelsen!
                 if sample_end < start_offset:
+                    logging.debug(f"Custom sample end before recording start(skipped): {w_start}--{w_end} dag {day+1}")
                     continue
                 if sample_start < start_offset:
+                    logging.info(f"Custom sample start before recording start(clipped): {w_start}--{w_end} dag {day+1}")
                     sample_start = start_offset
                 if sample_end > total_duration:
+                    logging.info(f"Custom sample end after recording end(clipped): {w_start}--{w_end} dag {day+1}")
                     sample_end = total_duration
                 if sample_start >= sample_end or sample_start >= total_duration:
+                    logging.info(f"Sample start after recording end(skipped): {w_start}--{w_end} dag {day+1}")
                     continue
                 rel_start = sample_start - start_offset
                 length = sample_end - sample_start
@@ -120,6 +127,7 @@ def split_samples(
                 idx += 1
     else:
         t = start_offset
+        logging.info(f"Using default intervals: {intervals}")
         while t < total_duration:
             day_num = int((t.total_seconds() // (24 * 3600)) + 1)
             abs_hour = int((t.total_seconds() // 3600) % 24)
@@ -140,6 +148,7 @@ def split_samples(
             idx += 1
     output_files = []
     n_files = (len(samples) + max_samples_per_file - 1) // max_samples_per_file
+    logging.info(f"Splitting into {n_files} files with a maximum of  {max_samples_per_file} samples per file")
     for filenum in range(n_files):
         samples_in_file = samples[filenum * max_samples_per_file:(filenum + 1) * max_samples_per_file]
         # Beregn længde af optagelsen der dækkes i denne fil:
@@ -182,7 +191,7 @@ if __name__ == "__main__":
         sample_windows=sample_windows
     )
     for fil in out:
-        print(fil["output_filename"])
+        print(fil["output_filename"], "Optagelseslængde: ", fil["file_length"])
         for s in fil["samples"]:
             print(f"{s['index']}: {s['label']} start={s['start_time']} length={s['length']}")
 

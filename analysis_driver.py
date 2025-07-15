@@ -2,12 +2,10 @@ import logging
 import time
 import pytesseract
 from PIL import ImageGrab
-import re
-from pathlib import Path
-import psutil
+
 import pyautogui
 from pywinauto import Application, Desktop
-from pywinauto.findwindows import find_windows
+
 
 from config import TITLE_KEYWORD, EXCEL_PATH, PROCESS_NAME
 from file_io import read_edf_list, resolve_edf_paths

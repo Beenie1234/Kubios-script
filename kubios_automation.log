@@ -2142,3 +2142,157 @@
 2025-06-30 18:48:36,380 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
 2025-07-03 17:37:04,056 - ERROR - Error in save_results function: 
 2025-07-05 17:16:09,108 - ERROR - Error in save_results function: 
+2025-07-13 16:29:47,383 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-13 16:29:47,383 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-13 16:29:47,384 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-13 16:37:03,373 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-13 16:37:03,373 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-13 16:37:03,373 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-13 16:37:03,374 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-13 16:37:03,374 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-13 16:37:03,374 - INFO - Splitting into 2 files with 15 samples
+2025-07-13 16:37:03,374 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-13 16:37:03,374 - INFO - Using default intervals: None
+2025-07-13 16:37:03,375 - INFO - Splitting into 2 files with 15 samples
+2025-07-13 16:38:29,403 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-13 16:38:29,404 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-13 16:38:29,404 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-13 16:38:29,404 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-13 16:38:29,404 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-13 16:38:29,404 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:38:29,405 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-13 16:38:29,405 - INFO - Using default intervals: None
+2025-07-13 16:38:29,405 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:38:40,297 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-13 16:38:40,297 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-13 16:38:40,298 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-13 16:38:40,298 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-13 16:38:40,298 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-13 16:38:40,298 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:38:40,298 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-13 16:38:40,298 - INFO - Using default intervals: None
+2025-07-13 16:38:40,298 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:39:41,622 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-13 16:39:41,623 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-13 16:39:41,623 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-13 16:39:41,623 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-13 16:39:41,623 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-13 16:39:41,623 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:39:41,624 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-13 16:39:41,624 - INFO - Using default intervals: None
+2025-07-13 16:39:41,624 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-13 16:56:35,659 - INFO - Using column File Name as source for EDF-files
+2025-07-13 16:56:35,660 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 16:56:35,680 - INFO - Using column File Name as source for EDF-files
+2025-07-13 16:56:35,681 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 16:56:36,574 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-13 16:58:39,099 - ERROR - Failed to load config: Invalid \escape: line 3 column 42 (char 124)
+2025-07-13 16:58:42,627 - ERROR - Failed to load config: Invalid \escape: line 3 column 42 (char 124)
+2025-07-13 17:01:37,505 - INFO - Using column File Name as source for EDF-files
+2025-07-13 17:01:37,505 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 17:01:37,518 - INFO - Using column File Name as source for EDF-files
+2025-07-13 17:01:37,518 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 17:01:38,333 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-13 17:02:41,128 - ERROR - Failed to load config: Expecting value: line 3 column 15 (char 97)
+2025-07-13 17:02:44,935 - ERROR - Failed to load config: Expecting value: line 3 column 15 (char 97)
+2025-07-13 17:02:45,252 - INFO - Using column File Name as source for EDF-files
+2025-07-13 17:02:45,252 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 17:02:45,259 - INFO - Using column File Name as source for EDF-files
+2025-07-13 17:02:45,260 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 17:02:46,276 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-13 19:06:36,780 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-13 19:06:37,331 - INFO - Using column File Name as source for EDF-files
+2025-07-13 19:06:37,331 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 19:06:37,343 - INFO - Using column File Name as source for EDF-files
+2025-07-13 19:06:37,344 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 19:06:38,152 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-13 19:06:59,758 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-13 19:07:21,039 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-13 19:07:21,040 - ERROR - Excel file . is not a file
+2025-07-13 19:07:30,525 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-13 19:07:30,995 - INFO - Using column File Name as source for EDF-files
+2025-07-13 19:07:30,995 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 19:07:31,005 - INFO - Using column File Name as source for EDF-files
+2025-07-13 19:07:31,006 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-13 19:07:31,857 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-14 17:57:17,699 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-14 17:57:17,700 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-14 17:57:17,700 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-14 17:57:17,701 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-14 17:57:17,701 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-14 17:57:17,701 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-14 17:57:17,701 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-14 17:57:17,702 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-14 17:57:17,702 - INFO - Using default intervals: None
+2025-07-14 17:57:17,703 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-14 18:10:05,683 - ERROR - Failed to load config: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-14 18:10:06,237 - ERROR - GUI: failed to load user_config.json: Expecting ',' delimiter: line 3 column 86 (char 168)
+2025-07-14 18:11:15,053 - INFO - GUI: configuration saved – starting pipeline
+2025-07-14 18:11:26,451 - ERROR - Could not import main.run_pipeline
+2025-07-14 18:24:50,931 - INFO - GUI: configuration saved – starting pipeline
+2025-07-14 18:32:30,906 - INFO - GUI: configuration saved – starting pipeline
+2025-07-15 17:00:39,381 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:00:41,920 - ERROR - Pipeline crashed from GUI
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\gui.py", line 143, in on_run
+    _run_pipeline(cfg)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\gui.py", line 48, in _run_pipeline
+    from main import run_pipeline  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 65
+    Called both from GUI (gui.py) and when main.py is executed CLI.
+IndentationError: unexpected indent
+2025-07-15 17:04:16,338 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:04:19,027 - ERROR - Pipeline crashed from GUI
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\gui.py", line 143, in on_run
+    _run_pipeline(cfg)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\gui.py", line 48, in _run_pipeline
+    from main import run_pipeline  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 65
+    Called both from GUI (gui.py) and when main.py is executed CLI.
+IndentationError: unexpected indent
+2025-07-15 17:05:12,933 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:05:15,940 - INFO - Using column File Name as source for EDF-files
+2025-07-15 17:05:15,940 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-15 17:05:16,558 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-15 17:05:16,558 - INFO - Starting run on 4 EDF files
+2025-07-15 17:05:17,038 - INFO - Kubios is not running
+2025-07-15 17:05:17,038 - INFO - Path: C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe does not exist
+2025-07-15 17:05:17,043 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:05:17,043 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-15 17:05:44,792 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:05:48,733 - INFO - Using column File Name as source for EDF-files
+2025-07-15 17:05:48,734 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-15 17:05:49,225 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-15 17:05:49,225 - INFO - Starting run on 4 EDF files
+2025-07-15 17:05:49,230 - INFO - Kubios is not running
+2025-07-15 17:05:49,230 - INFO - Path: C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe does not exist
+2025-07-15 17:05:49,235 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:05:49,235 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-15 17:05:54,240 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-07-15 17:05:54,240 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 958, in connect
+    wait_until(timeout, retry_interval, self.is_process_running, value=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 85, in run_pipeline
+    open_edf_file(edf)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_driver.py", line 41, in open_edf_file
+    app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 960, in connect
+    raise ProcessNotFoundError('Process with PID={} not found!'.format(self.process))
+pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
+2025-07-15 17:05:54,247 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:05:54,247 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf

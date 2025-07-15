@@ -2,14 +2,15 @@ import json
 import os
 from pathlib import Path
 import logging
-#config filer + logging
 
 
 #Standard-config som fallback
 DEFAULTS = {
     "kubios_path": r'C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe',
     "excel_path": str(Path(__file__).parent.parent / "Files_to_analyze.xlsx"),
-    "log_file": str(Path(__file__) / "kubios_automation.log")
+    "log_file": str(Path(__file__) / "kubios_automation.log"),
+    "output_dir": str(Path(__file__).parent.parent / "Output"),
+    "files_dir": str(Path(__file__).parent.parent)
 }
 
 #EXCEL_PATH = r"C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx"
@@ -54,5 +55,7 @@ CONFIG = load_config()
 KUBIOS_PATH = CONFIG["kubios_path"]
 EXCEL_PATH = CONFIG["excel_path"]
 LOG_FILE = CONFIG["log_file"]
+OUTPUT_DIR = CONFIG["output_dir"]
+FILES_DIR = CONFIG["files_dir"]
 
 

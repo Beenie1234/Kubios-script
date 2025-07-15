@@ -1,9 +1,7 @@
 import pyautogui
 import logging
 import time
-import traceback
 
-import pytesseract
 from PIL import ImageGrab, ImageOps
 
 from analysis_driver import click_center_left, click_right_of, click_right_upper
