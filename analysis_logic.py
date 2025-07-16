@@ -81,6 +81,7 @@ def split_samples(
     Output er relativ tid fra optagelsens start samt længde, ikke absolut tidspunkt.
     """
     h, m, s = map(int, start_time.split(":"))
+    print(f"h, m, s === {h, m, s}")
     start_offset = timedelta(hours=h, minutes=m, seconds=s)
     duration_td = parse_duration(duration_str)
     total_duration = start_offset + duration_td
@@ -185,7 +186,7 @@ if __name__ == "__main__":
         ("09:00:00", "16:00:00")
     ]
     out = split_samples(
-        start_time="08:53:03",
+        start_time="08.53.03",
         duration_str="148:00:00",
         patient_id="ID3",
         sample_windows=sample_windows

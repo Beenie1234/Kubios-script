@@ -2296,3 +2296,245 @@ Traceback (most recent call last):
 pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
 2025-07-15 17:05:54,247 - WARNING - No process found with the name 'kubioshrv'
 2025-07-15 17:05:54,247 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf
+2025-07-15 17:13:55,442 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:14:19,354 - INFO - Using column File Name as source for EDF-files
+2025-07-15 17:14:19,354 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-15 17:14:19,840 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-15 17:14:19,840 - INFO - Starting run on 4 EDF files
+2025-07-15 17:14:20,291 - INFO - Kubios is not running
+2025-07-15 17:14:20,292 - INFO - Path: C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe does not exist
+2025-07-15 17:14:20,296 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:14:20,296 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-15 17:14:25,302 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-07-15 17:14:25,302 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 958, in connect
+    wait_until(timeout, retry_interval, self.is_process_running, value=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 85, in run_pipeline
+    open_edf_file(edf)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_driver.py", line 41, in open_edf_file
+    app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 960, in connect
+    raise ProcessNotFoundError('Process with PID={} not found!'.format(self.process))
+pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
+2025-07-15 17:14:25,344 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:14:25,344 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf
+2025-07-15 17:14:30,350 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-07-15 17:14:30,350 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 958, in connect
+    wait_until(timeout, retry_interval, self.is_process_running, value=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 85, in run_pipeline
+    open_edf_file(edf)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_driver.py", line 41, in open_edf_file
+    app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 960, in connect
+    raise ProcessNotFoundError('Process with PID={} not found!'.format(self.process))
+pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
+2025-07-15 17:14:30,357 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:14:30,357 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID9_baseline.edf
+2025-07-15 17:14:35,362 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-07-15 17:14:35,362 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID9_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 958, in connect
+    wait_until(timeout, retry_interval, self.is_process_running, value=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 85, in run_pipeline
+    open_edf_file(edf)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_driver.py", line 41, in open_edf_file
+    app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 960, in connect
+    raise ProcessNotFoundError('Process with PID={} not found!'.format(self.process))
+pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
+2025-07-15 17:14:35,370 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:14:35,370 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID9_periop.edf
+2025-07-15 17:14:40,375 - ERROR - Error opening EDF file: Process with PID=None not found!
+2025-07-15 17:14:40,375 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID9_periop.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 958, in connect
+    wait_until(timeout, retry_interval, self.is_process_running, value=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 85, in run_pipeline
+    open_edf_file(edf)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_driver.py", line 41, in open_edf_file
+    app = Application(backend="uia").connect(title_re=TITLE_KEYWORD, process=get_pid_by_name(PROCESS_NAME))
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\.venv\Lib\site-packages\pywinauto\application.py", line 960, in connect
+    raise ProcessNotFoundError('Process with PID={} not found!'.format(self.process))
+pywinauto.application.ProcessNotFoundError: Process with PID=None not found!
+2025-07-15 17:14:40,381 - WARNING - No process found with the name 'kubioshrv'
+2025-07-15 17:14:40,381 - INFO - 
+===  KØRSEL FÆRDIG  ===
+Fuldførte analyser (0):
+  Ingen
+
+Fejlede analyser   (4):
+  ID1_baseline: Process with PID=None not found!
+  ID3_baseline: Process with PID=None not found!
+  ID9_baseline: Process with PID=None not found!
+  ID9_periop: Process with PID=None not found!
+
+2025-07-15 17:16:39,644 - INFO - GUI: configuration saved – running pipeline
+2025-07-15 17:16:43,047 - INFO - Using column File Name as source for EDF-files
+2025-07-15 17:16:43,047 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-15 17:16:43,521 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-15 17:16:43,521 - INFO - Starting run on 4 EDF files
+2025-07-15 17:16:43,530 - INFO - Kubios is not running
+2025-07-15 17:16:43,530 - INFO - Attempting to start Kubios
+2025-07-15 17:17:43,596 - INFO - Kubios has been started
+2025-07-15 17:17:44,013 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-15 17:17:44,013 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-15 17:17:56,738 - ERROR - Could not perform read: 
+2025-07-15 17:17:56,739 - INFO - Splitting samples fpr ID1_baseline with start time=00:00:00 and duration=150:00:00
+2025-07-15 17:17:56,739 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-15 17:17:56,739 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-15 17:17:56,739 - INFO - Processing block ID1_baseline_HRV_analysis_1_of_2 with 15 samples
+2025-07-15 17:17:57,149 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-15 17:17:57,149 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 113, in run_pipeline
+    raise RuntimeError(f"Add sample failed ({smp})")
+RuntimeError: Add sample failed ({'index': 1, 'start_time': '00:00:00', 'length': '07:00:00', 'label': 'Dag 1 nat'})
+2025-07-15 17:17:57,565 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-15 17:17:57,565 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf
+2025-07-15 17:18:14,119 - INFO - Splitting samples fpr ID3_baseline with start time=00:00:00 and duration=150:00:00
+2025-07-15 17:18:14,119 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-15 17:18:14,120 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-15 17:18:14,120 - INFO - Processing block ID3_baseline_HRV_analysis_1_of_2 with 15 samples
+2025-07-15 17:18:14,535 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-15 17:18:14,535 - ERROR - Failure on C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID3_baseline.edf
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 113, in run_pipeline
+    raise RuntimeError(f"Add sample failed ({smp})")
+RuntimeError: Add sample failed ({'index': 1, 'start_time': '00:00:00', 'length': '07:00:00', 'label': 'Dag 1 nat'})
+2025-07-15 17:18:14,543 - INFO - Not able to find main window. Found window: Reading Data File
+2025-07-15 17:18:14,951 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-15 17:18:14,951 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID9_baseline.edf
+2025-07-16 22:25:37,203 - INFO - GUI: configuration saved – running pipeline
+2025-07-16 22:27:01,760 - INFO - Using column File Name as source for EDF-files
+2025-07-16 22:27:01,761 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-16 22:27:02,709 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-16 22:27:02,709 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-16 22:27:03,228 - INFO - Kubios is not running
+2025-07-16 22:27:03,229 - INFO - Attempting to start Kubios
+2025-07-16 22:28:03,329 - INFO - Kubios has been started
+2025-07-16 22:28:07,797 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-16 22:28:07,797 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-16 22:28:22,586 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-16 22:28:23,815 - ERROR - Analysis of ID1_baseline failed!
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 54, in run_pipeline
+    raise RuntimeError(f"OCR failed: Start: {start_str}, Length: {length_str}")
+RuntimeError: OCR failed: Start: None, Length: None
+2025-07-16 22:28:23,821 - INFO - CLosing process: kubioshrv
+2025-07-16 22:28:28,825 - WARNING - No process found with the name 'kubioshrv'
+2025-07-16 22:28:33,825 - INFO - === Starting analysis of ID3_baseline ===
+2025-07-16 22:28:33,839 - INFO - Kubios is not running
+2025-07-16 22:28:33,839 - INFO - Attempting to start Kubios
+2025-07-16 22:30:41,128 - INFO - GUI: configuration saved – running pipeline
+2025-07-16 22:30:46,848 - INFO - Using column File Name as source for EDF-files
+2025-07-16 22:30:46,849 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-16 22:30:47,796 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-16 22:30:47,796 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-16 22:30:47,819 - INFO - Kubios is not running
+2025-07-16 22:30:47,820 - INFO - Attempting to start Kubios
+2025-07-16 22:31:47,825 - INFO - Kubios has been started
+2025-07-16 22:31:52,263 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-16 22:31:52,263 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-16 22:32:07,080 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-16 22:32:08,281 - ERROR - Analysis of ID1_baseline failed!
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 54, in run_pipeline
+    raise RuntimeError(f"OCR failed: Start: {start_str}, Length: {length_str}")
+RuntimeError: OCR failed: Start: None, Length: None
+2025-07-16 22:32:08,287 - INFO - CLosing process: kubioshrv
+2025-07-16 22:32:13,289 - WARNING - No process found with the name 'kubioshrv'
+2025-07-16 22:34:33,810 - INFO - GUI: configuration saved – running pipeline
+2025-07-16 22:34:36,366 - INFO - Using column File Name as source for EDF-files
+2025-07-16 22:34:36,366 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-16 22:34:37,239 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-16 22:34:37,239 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-16 22:34:37,786 - INFO - Kubios is not running
+2025-07-16 22:34:37,786 - INFO - Attempting to start Kubios
+2025-07-16 22:35:37,791 - INFO - Kubios has been started
+2025-07-16 22:35:42,239 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-16 22:35:42,239 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-16 22:36:14,914 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-16 22:36:17,926 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-16 22:36:17,926 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-16 22:36:17,926 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-16 22:36:17,926 - ERROR - Analysis of ID1_baseline failed!
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 58, in run_pipeline
+    blocks = split_samples(start_str, length_str, pid, MAX_SAMPLES_PER_FILE, intervals=intervals)
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\analysis_logic.py", line 83, in split_samples
+    h, m, s = map(int, start_time.split(":"))
+    ^^^^^^^
+ValueError: invalid literal for int() with base 10: '07.53.59'
+2025-07-16 22:36:17,952 - INFO - CLosing process: kubioshrv
+2025-07-16 22:36:22,955 - WARNING - No process found with the name 'kubioshrv'
+2025-07-16 22:36:27,956 - INFO - === Starting analysis of ID3_baseline ===
+2025-07-16 22:36:27,965 - INFO - Kubios is not running
+2025-07-16 22:36:27,966 - INFO - Attempting to start Kubios
+2025-07-16 22:41:19,233 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-16 22:41:19,233 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-16 22:41:19,233 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-16 22:41:19,233 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-16 22:41:19,234 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-16 22:41:19,234 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:41:19,234 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-16 22:41:19,234 - INFO - Using default intervals: None
+2025-07-16 22:41:19,234 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:42:14,261 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-16 22:42:14,262 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-16 22:42:14,263 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-16 22:42:14,264 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-16 22:42:14,264 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-16 22:42:14,264 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:42:14,265 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-16 22:42:14,265 - INFO - Using default intervals: None
+2025-07-16 22:42:14,265 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:43:30,854 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-16 22:43:40,483 - INFO - Splitting samples fpr ID3 with start time=08:53:03 and duration=148:00:00
+2025-07-16 22:43:40,483 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-16 22:43:40,484 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-16 22:43:40,484 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-16 22:43:40,484 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-16 22:43:40,484 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:43:40,484 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-16 22:43:40,484 - INFO - Using default intervals: None
+2025-07-16 22:43:40,485 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 22:43:55,999 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
