@@ -96,9 +96,13 @@ def open_kubios(kubios_path=KUBIOS_PATH):
 
     logging.info(f"Attempting to start Kubios")
     try:
-        subprocess.Popen([kubios_path], stdin=subprocess.DEVNULL,
+        for open_try in range(6):
+
+            subprocess.Popen([kubios_path], stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        time.sleep(STARTUP_DELAY)
+            time.sleep(STARTUP_DELAY)
+            if is_kubios_running():
+                break
         logging.info("Kubios has been started")
         return True
     except Exception as e:

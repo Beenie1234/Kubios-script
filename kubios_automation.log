@@ -2538,3 +2538,326 @@ ValueError: invalid literal for int() with base 10: '07.53.59'
 2025-07-16 22:43:40,484 - INFO - Using default intervals: None
 2025-07-16 22:43:40,485 - INFO - Splitting into 2 files with a maximum of  15 samples per file
 2025-07-16 22:43:55,999 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-16 22:58:12,693 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-16 23:01:15,939 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-16 23:01:15,939 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-16 23:01:15,940 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-16 23:01:15,940 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-16 23:01:15,940 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-16 23:01:15,940 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 23:01:15,940 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-16 23:01:15,940 - INFO - Using default intervals: None
+2025-07-16 23:01:15,940 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 23:01:44,182 - INFO - GUI: configuration saved – running pipeline
+2025-07-16 23:01:46,717 - INFO - Using column File Name as source for EDF-files
+2025-07-16 23:01:46,718 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-16 23:01:47,681 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-16 23:01:47,681 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-16 23:01:48,153 - INFO - Kubios is running
+2025-07-16 23:01:48,153 - INFO - Kubios is already running
+2025-07-16 23:01:53,605 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-16 23:01:58,037 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-16 23:01:58,037 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-16 23:02:30,722 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-16 23:02:32,777 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-16 23:02:32,777 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-16 23:02:32,777 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-16 23:02:32,778 - INFO - Using default intervals: [['custom', 7, 15], ['custom', 15, 23], ['custom', 23, 7]]
+2025-07-16 23:02:32,778 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-16 23:02:40,868 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:41,800 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:42,704 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:43,601 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:44,502 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:45,423 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:46,314 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:47,267 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:48,077 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:48,777 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:49,480 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:50,171 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:50,891 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-16 23:02:51,699 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 10:59:36,919 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:00:55,038 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:00:58,516 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:00:58,516 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:00:59,635 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:00:59,636 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:01:00,201 - INFO - Kubios is running
+2025-07-17 11:01:00,201 - INFO - Kubios is already running
+2025-07-17 11:01:05,670 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0 - C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf'
+2025-07-17 11:01:29,927 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:01:32,386 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:01:32,387 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:01:33,225 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:01:33,226 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:01:33,820 - INFO - Kubios is not running
+2025-07-17 11:01:33,820 - INFO - Attempting to start Kubios
+2025-07-17 11:02:33,831 - INFO - Kubios has been started
+2025-07-17 11:02:38,262 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-17 11:02:38,262 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 11:03:10,886 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 11:03:12,987 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 11:03:12,987 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 11:03:12,988 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 11:03:12,988 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 11:03:12,988 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 11:03:21,079 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:22,063 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:22,979 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:23,857 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:24,737 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:25,658 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:26,603 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:27,515 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:28,368 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:03:29,102 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:14:29,523 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:14:34,722 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:14:34,722 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:14:47,814 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:14:50,330 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:14:50,331 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:14:51,330 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:14:51,330 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:14:51,933 - INFO - Kubios is not running
+2025-07-17 11:14:51,934 - INFO - Attempting to start Kubios
+2025-07-17 11:15:51,941 - INFO - Kubios has been started
+2025-07-17 11:15:56,385 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-17 11:15:56,385 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 11:16:29,053 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 11:16:31,051 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 11:16:31,051 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 11:16:31,051 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 11:16:31,052 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 11:16:31,052 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 11:33:20,072 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:33:22,310 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:33:22,311 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:33:23,094 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:33:23,094 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:33:23,578 - INFO - Kubios is not running
+2025-07-17 11:33:23,579 - INFO - Attempting to start Kubios
+2025-07-17 11:34:23,587 - INFO - Kubios has been started
+2025-07-17 11:34:28,029 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-17 11:34:28,029 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 11:35:00,700 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 11:35:02,689 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 11:35:02,690 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 11:35:02,690 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 11:35:02,690 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 11:35:02,690 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 11:36:24,394 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:36:26,438 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:36:26,438 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:36:27,314 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:36:27,314 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:36:27,804 - INFO - Kubios is not running
+2025-07-17 11:36:27,805 - INFO - Attempting to start Kubios
+2025-07-17 11:37:27,810 - INFO - Kubios has been started
+2025-07-17 11:37:32,255 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0'
+2025-07-17 11:37:32,255 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 11:38:04,907 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 11:38:06,927 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 11:38:06,927 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 11:38:06,927 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 11:38:06,927 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 11:38:06,928 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 11:38:06,928 - ERROR - Analysis of ID1_baseline failed!
+Traceback (most recent call last):
+  File "C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\Kubios_ny\main.py", line 79, in run_pipeline
+    block_len_td = block_end_td - block_start_td
+                   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.timedelta'
+2025-07-17 11:38:06,941 - INFO - CLosing process: kubioshrv
+2025-07-17 11:38:11,944 - WARNING - No process found with the name 'kubioshrv'
+2025-07-17 11:38:16,944 - INFO - === Starting analysis of ID3_baseline ===
+2025-07-17 11:38:16,956 - INFO - Kubios is not running
+2025-07-17 11:38:16,957 - INFO - Attempting to start Kubios
+2025-07-17 11:44:23,317 - INFO - Kubios is not running
+2025-07-17 11:44:23,318 - INFO - Attempting to start Kubios
+2025-07-17 11:44:33,329 - INFO - Kubios is running
+2025-07-17 11:44:33,329 - INFO - Kubios has been started
+2025-07-17 11:55:34,763 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 11:55:38,029 - INFO - Using column File Name as source for EDF-files
+2025-07-17 11:55:38,030 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 11:55:39,009 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 11:55:39,009 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 11:55:39,558 - INFO - Kubios is not running
+2025-07-17 11:55:39,559 - INFO - Attempting to start Kubios
+2025-07-17 11:55:49,576 - INFO - Kubios is running
+2025-07-17 11:55:49,576 - INFO - Kubios has been started
+2025-07-17 11:55:53,972 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 11:55:53,973 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 11:56:34,760 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 11:56:36,767 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 11:56:36,767 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 11:56:36,767 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 11:56:36,767 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 11:56:36,768 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 11:56:57,690 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:56:58,625 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:56:59,562 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:00,478 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:01,426 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:02,332 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:03,219 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:04,129 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:05,047 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:05,954 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:06,886 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:07,783 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:08,702 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:09,599 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:10,487 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 11:57:26,226 - ERROR - Error in save_results function: 
+2025-07-17 11:57:27,502 - ERROR - Could not perform read: 
+2025-07-17 12:05:41,458 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:05:53,073 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:07:13,955 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:07:38,183 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:41:06,500 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:41:10,713 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:45:26,385 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:46:16,509 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 12:46:19,495 - INFO - Using column File Name as source for EDF-files
+2025-07-17 12:46:19,495 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 12:46:20,312 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 12:46:20,312 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 12:46:20,769 - INFO - Kubios is not running
+2025-07-17 12:46:20,769 - INFO - Attempting to start Kubios
+2025-07-17 12:46:30,783 - INFO - Kubios is running
+2025-07-17 12:46:30,783 - INFO - Kubios has been started
+2025-07-17 12:46:34,797 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 12:46:34,797 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 12:47:13,320 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 12:47:15,286 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 12:47:15,286 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 12:47:15,286 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 12:47:15,286 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 12:47:15,287 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 12:47:21,033 - INFO - Detected analysis window
+2025-07-17 12:47:21,745 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:22,860 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:23,954 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:25,088 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:26,167 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:27,260 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:28,337 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:29,407 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:30,514 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:31,420 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:32,342 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:33,339 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:34,265 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:35,195 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:36,113 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:51,836 - ERROR - Error in save_results function: 
+2025-07-17 12:47:53,025 - ERROR - Could not perform read: 
+2025-07-17 12:47:53,164 - INFO - Detected analysis window
+2025-07-17 12:47:53,578 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:54,494 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:55,641 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:47:56,554 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:50:49,237 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 12:50:51,760 - INFO - Using column File Name as source for EDF-files
+2025-07-17 12:50:51,761 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 12:50:52,580 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 12:50:52,580 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 12:50:53,091 - INFO - Kubios is not running
+2025-07-17 12:50:53,091 - INFO - Attempting to start Kubios
+2025-07-17 12:51:03,104 - INFO - Kubios is running
+2025-07-17 12:51:03,104 - INFO - Kubios has been started
+2025-07-17 12:51:07,110 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 12:51:07,110 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 12:51:41,913 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 12:51:43,938 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 12:51:43,938 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 12:51:43,938 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 12:51:43,938 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 12:51:43,939 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 12:51:53,648 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:51:57,813 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:01,989 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:06,113 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:10,276 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:14,377 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:18,498 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:22,619 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:26,724 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:30,848 - ERROR - Failed to detect analysis window: 
+2025-07-17 12:52:31,234 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:32,137 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:33,032 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:33,931 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:34,835 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:35,748 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:36,634 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:37,539 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:38,447 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:39,355 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:40,271 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:41,200 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:42,209 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:43,120 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:44,072 - ERROR - Error in add_sample function: Could not find any add sample button
+2025-07-17 12:52:59,863 - ERROR - Error in save_results function: 
+2025-07-17 12:53:01,135 - ERROR - Could not perform read: 
+2025-07-17 12:53:01,312 - INFO - Detected analysis window
+2025-07-17 12:55:13,556 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 12:55:15,845 - INFO - Using column File Name as source for EDF-files
+2025-07-17 12:55:15,846 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 12:55:16,774 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 12:55:16,775 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 12:55:17,265 - INFO - Kubios is not running
+2025-07-17 12:55:17,265 - INFO - Attempting to start Kubios
+2025-07-17 12:55:27,279 - INFO - Kubios is running
+2025-07-17 12:55:27,279 - INFO - Kubios has been started
+2025-07-17 12:55:31,288 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 12:55:31,289 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 12:56:06,718 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 12:56:08,789 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 12:56:08,790 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 12:56:08,790 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 12:56:08,790 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 12:56:08,790 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 12:57:26,272 - INFO - Detected analysis window
+2025-07-17 13:00:39,918 - ERROR - Error in save_results function: 
+2025-07-17 13:00:41,089 - ERROR - Could not perform read: 
+2025-07-17 13:00:41,198 - INFO - Detected analysis window
+2025-07-17 13:00:43,767 - ERROR - Could not find start field image
+2025-07-17 13:00:43,767 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 13:00:46,810 - ERROR - Could not find start field image
+2025-07-17 13:00:46,810 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 13:00:49,878 - ERROR - Could not find start field image
+2025-07-17 13:00:49,879 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 13:00:53,084 - ERROR - Could not find start field image
+2025-07-17 13:00:53,084 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 15:26:36,059 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:26:36,060 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:26:36,060 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:26:36,060 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:26:36,060 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:26:36,061 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:26:36,061 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:26:36,061 - INFO - Using default intervals: None
+2025-07-17 15:26:36,061 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:40:50,003 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:40:50,003 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:40:50,004 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:40:50,004 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:40:50,004 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:40:50,004 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:40:50,004 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:40:50,004 - INFO - Using default intervals: None
+2025-07-17 15:40:50,004 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:45:09,358 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:45:09,358 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:45:09,358 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:45:09,359 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:45:09,359 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:45:09,359 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:45:09,359 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:45:09,359 - INFO - Using default intervals: None
+2025-07-17 15:45:09,359 - INFO - Splitting into 2 files with a maximum of  15 samples per file

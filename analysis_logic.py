@@ -1,3 +1,4 @@
+import re
 from datetime import timedelta
 from typing import List, Dict, Any, Tuple
 import logging
@@ -80,7 +81,7 @@ def split_samples(
     Fleksibel split: Hvis sample_windows er angivet, laves samples præcis efter windows, uanset overlap/spring.
     Output er relativ tid fra optagelsens start samt længde, ikke absolut tidspunkt.
     """
-    h, m, s = map(int, start_time.split(":"))
+    h, m, s = map(int, re.split(r'[:.]', start_time))
     print(f"h, m, s === {h, m, s}")
     start_offset = timedelta(hours=h, minutes=m, seconds=s)
     duration_td = parse_duration(duration_str)
@@ -154,8 +155,6 @@ def split_samples(
         samples_in_file = samples[filenum * max_samples_per_file:(filenum + 1) * max_samples_per_file]
         # Beregn længde af optagelsen der dækkes i denne fil:
         if samples_in_file:
-            file_start = samples_in_file[0]["start_time"]
-
             # sidste samples slut: rel_start + length
             def str_to_td(s):
                 h, m, s = map(int, s.split(":"))

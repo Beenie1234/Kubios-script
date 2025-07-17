@@ -15,15 +15,22 @@ from config import CONFIG, LOG_FILE, DAY_INTERVALS, MAX_SAMPLES_PER_FILE
 from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, close_kubios
 from analysis_driver import (open_edf_file, perform_read,
-                             detect_analysis_error, read_time_and_length)
+                             detect_analysis_error, read_time_and_length, detect_analysis_window)
 from sample_and_saver import add_sample, save_results
-from analysis_logic import split_samples
+from analysis_logic import split_samples, td_to_str
 
 # ------------------------------------------------------------------ logging --
 logging.basicConfig(filename=LOG_FILE,
                     level=logging.INFO,
                     format="%(asctime)s %(levelname)s %(name)s  %(message)s")
 logger = logging.getLogger(__name__)
+
+def str_to_td(s: str):
+    h, m, s = map(int, s.split(':'))
+    from datetime import timedelta
+    return timedelta(hours=h, minutes=m, seconds=s)
+
+
 
 def run_pipeline(cfg: Dict[str, str | List]) -> None:
 
@@ -49,8 +56,13 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
             time.sleep(20)
 
             # læser start og længde med OCr
-            start_str, length_str = read_time_and_length()
-            if not start_str or not length_str:
+            for ocr_try in range(10):
+                start_str, length_str = read_time_and_length()
+                if start_str and length_str:
+                    break
+                logger.warning(f"OCR attempt {ocr_try+1} failed, trying again...")
+                time.sleep(4)
+            else:
                 raise RuntimeError(f"OCR failed: Start: {start_str}, Length: {length_str}")
             logger.info(f"OCR started: start: {start_str}, length: {length_str}")
 
@@ -58,16 +70,23 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
             blocks = split_samples(start_str, length_str, pid, MAX_SAMPLES_PER_FILE, intervals=intervals)
 
             for blk in blocks:
-                b_start = blk["samples"][0]["start_time"]
-                b_length = blk["samples"][-1]["length"]
-                read_all = (b_start == "00:00:00" and b_length == length_str)
-                perform_read(read_all, b_start, b_length if not read_all else None)
-                time.sleep(2)
+                first = blk["samples"][0]
+                last = blk["samples"][-1]
 
-                #tilføje samples
+                block_start_td = str_to_td(first["start_time"])
+                block_end_td = str_to_td(last["start_time"])
+                block_len_td = block_end_td - block_start_td
+                block_len_str = td_to_str(block_len_td)
+                print(f"Block length: {block_len_str}")
+
+                read_all = (block_start_td.total_seconds() == 0 and block_len_str == length_str)
+                perform_read(read_all, first["start_time"], block_len_str if not read_all else None)
+                if detect_analysis_window():
+                    logger.info("Detected analysis window")
                 for smp in blk["samples"]:
-                    add_sample(smp["start_time"], smp["length"],smp["index"], smp["label"])
-                    time.sleep(0.3)
+                    add_sample(smp["start_time"], smp["length"], smp["index"], smp["label"])
+                    time.sleep(0.5)
+
                 save_results(str(output_dir), blk["output_filename"])
                 time.sleep(1)
                 if detect_analysis_error("error"):

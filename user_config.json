@@ -5,17 +5,17 @@
   "output_dir": "C:\\Users\\Mikkel\\Desktop\\Sven\\Kubios_ny_ny\\Output",
   "day_intervals": [
     [
-      "custom",
+      "dag",
       7,
       15
     ],
     [
-      "custom",
+      "aften",
       15,
       23
     ],
     [
-      "custom",
+      "nat",
       23,
       7
     ]

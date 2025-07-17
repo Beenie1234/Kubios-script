@@ -11,6 +11,29 @@ from config import TITLE_KEYWORD, EXCEL_PATH, PROCESS_NAME
 from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
+
+def detect_analysis_window():
+        try:
+            analysis_window_label = None
+            for analysis_window in range(25):
+                print(f"trying to detect analysis window. Try no. {analysis_window}")
+                try:
+                    analysis_window_label = pyautogui.locateOnScreen("assets/images/analysis_window.png", confidence=0.8)
+                    if analysis_window_label is not None:
+                        return True
+                    continue
+                except pyautogui.ImageNotFoundException as exc:
+                    time.sleep(5)
+                    continue
+            return False
+
+
+        except Exception as e:
+            logging.error(f"Failed to detect analysis window: {e}")
+            return False
+
+
+
 def detect_analysis_error(error_title: str):
     try:
         error_windows = []
@@ -172,13 +195,15 @@ def click_right_lower(region):
 
 
 if __name__ == "__main__":
-
-    open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
-    edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
-    open_edf_file(edf_file_path[0])
-    detect_analysis_error("error")
-    time.sleep(10)
-    print(read_time_and_length())
-    perform_read(True, "07:56:17", "80:00:00")
+    if detect_analysis_window():
+        print("detected analysis window")
+    print("analysis window is now open")
+    #open_kubios(r"C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe")
+    #edf_file_path = resolve_edf_paths(EXCEL_PATH, read_edf_list(EXCEL_PATH))
+    #open_edf_file(edf_file_path[0])
+    #detect_analysis_error("error")
+    #time.sleep(10)
+    #print(read_time_and_length())
+    #perform_read(True, "07:56:17", "80:00:00")
 
 
