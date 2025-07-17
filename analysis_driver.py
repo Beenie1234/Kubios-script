@@ -12,6 +12,27 @@ from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
 
+def detect_save_dialog():
+    try:
+        save_dialog_label = None
+        for analysis_window in range(30):
+            print(f"trying to detect save dialog. Try no. {analysis_window+1}")
+            try:
+                save_dialog_label = pyautogui.locateOnScreen("assets/images/save_cancel.png", confidence=0.8)
+                if save_dialog_label is not None:
+                    return True
+                continue
+            except pyautogui.ImageNotFoundException as exc:
+                time.sleep(5)
+                continue
+        return False
+
+
+    except Exception as e:
+        logging.error(f"Failed to detect analysis window: {e}")
+        return False
+
+
 def detect_analysis_window():
         try:
             analysis_window_label = None

@@ -2861,3 +2861,190 @@ TypeError: unsupported operand type(s) for -: 'str' and 'datetime.timedelta'
 2025-07-17 15:45:09,359 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
 2025-07-17 15:45:09,359 - INFO - Using default intervals: None
 2025-07-17 15:45:09,359 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:47:22,323 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:47:22,324 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:47:22,324 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:47:22,324 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:47:22,324 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:47:22,324 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:47:22,325 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:47:22,325 - INFO - Using default intervals: None
+2025-07-17 15:47:22,325 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:53:33,748 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:53:33,748 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:53:33,749 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:53:33,749 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:53:33,749 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:55:47,219 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:55:47,219 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:55:47,220 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:55:47,220 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:55:47,220 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:55:47,220 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:55:47,220 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:55:47,220 - INFO - Using default intervals: None
+2025-07-17 15:55:47,221 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:57:31,842 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 15:57:31,843 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 15:57:31,843 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 15:57:31,844 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 15:57:31,844 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 15:57:31,844 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 15:57:31,844 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 15:57:31,845 - INFO - Using default intervals: None
+2025-07-17 15:57:31,845 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 16:00:43,481 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 16:00:43,482 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 16:00:43,482 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 16:00:43,482 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 16:00:43,483 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 16:00:43,483 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 16:00:43,483 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 16:00:43,483 - INFO - Using default intervals: None
+2025-07-17 16:00:43,484 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 16:57:11,328 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 16:57:11,329 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 16:57:11,330 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 16:57:11,330 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 16:57:11,330 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 16:57:11,330 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 16:57:11,331 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 16:57:11,331 - INFO - Using default intervals: None
+2025-07-17 16:57:11,332 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 17:03:43,275 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 17:03:43,276 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 17:03:43,276 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 17:03:43,276 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 17:03:43,276 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 17:03:43,276 - INFO - Generated 21 samples -> 2 files (<80h per block)
+2025-07-17 17:05:16,428 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 17:05:16,428 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 17:05:16,429 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 17:05:16,429 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 17:05:16,429 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 17:05:16,429 - INFO - Generated 21 samples -> 2 files (<80h per block)
+2025-07-17 17:05:16,429 - INFO - Splitting into 2 files with a maximum of  15 samples per file
+2025-07-17 17:11:43,838 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 17:11:43,838 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 17:11:43,839 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 17:11:43,839 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 17:11:43,839 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 17:11:43,839 - INFO - Generated 21 samples -> 2 files (<80h per block)
+2025-07-17 17:11:43,839 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 17:11:43,840 - INFO - Using default intervals: None
+2025-07-17 17:11:43,840 - INFO - Generated 18 samples -> 2 files (<80h per block)
+2025-07-17 17:12:35,051 - INFO - Splitting samples fpr ID3 with start time=08.53.03 and duration=148:00:00
+2025-07-17 17:12:35,051 - INFO - Using custom intervals: [('07:00:00', '14:00:00'), ('08:00:00', '15:00:00'), ('09:00:00', '16:00:00')]
+2025-07-17 17:12:35,052 - INFO - Custom sample end after recording end(clipped): 07:00:00--14:00:00 dag 7
+2025-07-17 17:12:35,052 - INFO - Custom sample end after recording end(clipped): 08:00:00--15:00:00 dag 7
+2025-07-17 17:12:35,052 - INFO - Custom sample end after recording end(clipped): 09:00:00--16:00:00 dag 7
+2025-07-17 17:12:35,052 - INFO - Generated 21 samples -> 2 files (<80h per block)
+2025-07-17 17:12:35,052 - INFO - Splitting samples fpr ID1 with start time=10:23:00 and duration=140:15:00
+2025-07-17 17:12:35,052 - INFO - Using default intervals: None
+2025-07-17 17:12:35,053 - INFO - Generated 18 samples -> 2 files (<80h per block)
+2025-07-17 17:15:46,362 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 17:15:48,847 - INFO - Using column File Name as source for EDF-files
+2025-07-17 17:15:48,848 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 17:15:49,777 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 17:15:49,777 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 17:15:50,259 - INFO - Kubios is not running
+2025-07-17 17:15:50,260 - INFO - Attempting to start Kubios
+2025-07-17 17:16:00,377 - INFO - Kubios is running
+2025-07-17 17:16:00,377 - INFO - Kubios has been started
+2025-07-17 17:16:04,397 - INFO - Not able to find main window. Found window: 
+2025-07-17 17:16:04,600 - ERROR - Failed to bring window to front: 
+2025-07-17 17:16:04,600 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 17:16:37,052 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:16:38,303 - WARNING - OCR attempt 1 failed, trying again...
+2025-07-17 17:16:42,306 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:16:43,554 - WARNING - OCR attempt 2 failed, trying again...
+2025-07-17 17:16:47,555 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:16:48,809 - WARNING - OCR attempt 3 failed, trying again...
+2025-07-17 17:16:52,810 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:16:54,047 - WARNING - OCR attempt 4 failed, trying again...
+2025-07-17 17:16:58,047 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:16:59,301 - WARNING - OCR attempt 5 failed, trying again...
+2025-07-17 17:17:34,858 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 17:17:37,258 - INFO - Using column File Name as source for EDF-files
+2025-07-17 17:17:37,258 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 17:17:38,156 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 17:17:38,156 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 17:17:38,637 - INFO - Kubios is not running
+2025-07-17 17:17:38,637 - INFO - Attempting to start Kubios
+2025-07-17 17:17:48,650 - INFO - Kubios is running
+2025-07-17 17:17:48,650 - INFO - Kubios has been started
+2025-07-17 17:18:53,156 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 17:18:55,264 - INFO - Using column File Name as source for EDF-files
+2025-07-17 17:18:55,265 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 17:18:56,056 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 17:18:56,056 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 17:18:56,592 - INFO - Kubios is not running
+2025-07-17 17:18:56,592 - INFO - Attempting to start Kubios
+2025-07-17 17:19:06,603 - INFO - Kubios is running
+2025-07-17 17:19:06,603 - INFO - Kubios has been started
+2025-07-17 17:19:10,613 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 17:19:10,613 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 17:19:45,589 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:19:48,626 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 17:19:48,626 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 17:19:48,626 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 17:19:48,626 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 17:19:48,627 - INFO - Generated 19 samples -> 2 files (<80h per block)
+2025-07-17 17:20:40,496 - INFO - Detected analysis window
+2025-07-17 17:22:53,727 - ERROR - Error in save_results function: 
+2025-07-17 17:22:54,916 - ERROR - Could not perform read: 
+2025-07-17 17:22:55,022 - INFO - Detected analysis window
+2025-07-17 17:22:57,609 - ERROR - Could not find start field image
+2025-07-17 17:22:57,609 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:23:00,694 - ERROR - Could not find start field image
+2025-07-17 17:23:00,694 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:23:03,826 - ERROR - Could not find start field image
+2025-07-17 17:23:03,826 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:23:06,917 - ERROR - Could not find start field image
+2025-07-17 17:23:06,917 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:30:45,296 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 17:30:47,869 - INFO - Using column File Name as source for EDF-files
+2025-07-17 17:30:47,869 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 17:30:48,833 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 17:30:48,834 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 17:30:49,295 - INFO - Kubios is running
+2025-07-17 17:30:49,295 - INFO - Kubios is already running
+2025-07-17 17:30:54,762 - INFO - Kubios window brought to front: 'Kubios HRV Premium 3.5.0 - C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf'
+2025-07-17 17:31:37,054 - INFO - GUI: configuration saved – running pipeline
+2025-07-17 17:31:39,811 - INFO - Using column File Name as source for EDF-files
+2025-07-17 17:31:39,812 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-17 17:31:40,687 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-17 17:31:40,687 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-17 17:31:41,188 - INFO - Kubios is not running
+2025-07-17 17:31:41,188 - INFO - Attempting to start Kubios
+2025-07-17 17:31:51,203 - INFO - Kubios is running
+2025-07-17 17:31:51,203 - INFO - Kubios has been started
+2025-07-17 17:31:55,211 - INFO - No window found with the name 'kubioshrv'
+2025-07-17 17:31:55,211 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-17 17:32:30,129 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-17 17:32:32,291 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-17 17:32:32,291 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-17 17:32:32,291 - INFO - Splitting samples fpr ID1_baseline with start time=07.53.59 and duration=147:45:37
+2025-07-17 17:32:32,291 - INFO - Using default intervals: [('dag', 7, 15), ('aften', 15, 23), ('nat', 23, 7)]
+2025-07-17 17:32:32,292 - INFO - Generated 19 samples -> 2 files (<80h per block)
+2025-07-17 17:33:19,076 - INFO - Detected analysis window
+2025-07-17 17:36:10,474 - ERROR - Could not perform read: 
+2025-07-17 17:36:10,618 - INFO - Detected analysis window
+2025-07-17 17:36:13,296 - ERROR - Could not find start field image
+2025-07-17 17:36:13,296 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:16,479 - ERROR - Could not find start field image
+2025-07-17 17:36:16,480 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:19,568 - ERROR - Could not find start field image
+2025-07-17 17:36:19,568 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:22,632 - ERROR - Could not find start field image
+2025-07-17 17:36:22,632 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:25,695 - ERROR - Could not find start field image
+2025-07-17 17:36:25,695 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:28,756 - ERROR - Could not find start field image
+2025-07-17 17:36:28,756 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:31,829 - ERROR - Could not find start field image
+2025-07-17 17:36:31,829 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:34,897 - ERROR - Could not find start field image
+2025-07-17 17:36:34,897 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png
+2025-07-17 17:36:37,953 - ERROR - Could not find start field image
+2025-07-17 17:36:37,953 - ERROR - Error in add_sample function: Could not find start field image: assets/images/add_sample_popup_start.png

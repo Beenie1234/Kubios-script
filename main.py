@@ -17,7 +17,7 @@ from kubios_control import open_kubios, bring_kubios_to_front, close_kubios
 from analysis_driver import (open_edf_file, perform_read,
                              detect_analysis_error, read_time_and_length, detect_analysis_window)
 from sample_and_saver import add_sample, save_results
-from analysis_logic import split_samples, td_to_str
+from analysis_logic import split_samples, td_to_str, str_to_td
 
 # ------------------------------------------------------------------ logging --
 logging.basicConfig(filename=LOG_FILE,
@@ -25,10 +25,6 @@ logging.basicConfig(filename=LOG_FILE,
                     format="%(asctime)s %(levelname)s %(name)s  %(message)s")
 logger = logging.getLogger(__name__)
 
-def str_to_td(s: str):
-    h, m, s = map(int, s.split(':'))
-    from datetime import timedelta
-    return timedelta(hours=h, minutes=m, seconds=s)
 
 
 
@@ -38,6 +34,7 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
     excel_path = Path(cfg["excel_path"])
     files_dir = Path(cfg["files_dir"])
     output_dir = Path(cfg["output_dir"]).resolve()
+    output_dir.mkdir(parents=True, exist_ok=True)
     kubios_exe = Path(cfg["kubios_path"])
     intervals = cfg.get("day_intervals", DAY_INTERVALS)
 
@@ -53,10 +50,9 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
             time.sleep(4)
             bring_kubios_to_front()
             open_edf_file(edf)
-            time.sleep(20)
 
-            # læser start og længde med OCr
-            for ocr_try in range(10):
+            # læser start og længde med OCR
+            for ocr_try in range(15):
                 start_str, length_str = read_time_and_length()
                 if start_str and length_str:
                     break
@@ -70,6 +66,7 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
             blocks = split_samples(start_str, length_str, pid, MAX_SAMPLES_PER_FILE, intervals=intervals)
 
             for blk in blocks:
+
                 first = blk["samples"][0]
                 last = blk["samples"][-1]
 

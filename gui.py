@@ -57,7 +57,7 @@ def _run_pipeline(cfg: dict):
 class ConfigUI(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Kubios HRV Automation – Setup")
+        self.title("HRV Automation – Setup")
         self.resizable(False, False)
 
         cfg = load_cfg()

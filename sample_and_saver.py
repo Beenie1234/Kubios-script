@@ -4,7 +4,7 @@ import time
 
 from PIL import ImageGrab, ImageOps
 
-from analysis_driver import click_center_left, click_right_of, click_right_upper
+from analysis_driver import click_center_left, click_right_of, click_right_upper, detect_save_dialog
 
 
 def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int, sample_name: str,
@@ -127,7 +127,8 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
 
     try:
         pyautogui.hotkey("ctrl", "s")
-        time.sleep(15)
+        if detect_save_dialog():
+            print("save dialog detected")
         path_field = pyautogui.locateOnScreen(save_dialog_dir_img, confidence=0.8)
         time.sleep(0.5)
         if not path_field:

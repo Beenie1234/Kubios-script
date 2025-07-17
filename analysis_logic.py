@@ -3,7 +3,7 @@ from datetime import timedelta
 from typing import List, Dict, Any, Tuple
 import logging
 
-from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE
+from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE, MAX_READ_LENGTH
 
 DEFAULT_INTERVALS = DAY_INTERVALS
 
@@ -18,6 +18,11 @@ def parse_time_tuple(time_str):
     while len(parts) < 3:
         parts.append(0)
     return parts
+
+def str_to_td(s: str):
+    h, m, s = map(int, s.split(':'))
+    from datetime import timedelta
+    return timedelta(hours=h, minutes=m, seconds=s)
 
 
 def td_to_str(td):
@@ -66,6 +71,7 @@ def next_interval_end(current_time: timedelta, intervals=None) -> timedelta:
                     interval_end += timedelta(days=1)
                 return interval_end
     return current_time + timedelta(hours=8)
+
 
 
 def split_samples(
@@ -148,17 +154,60 @@ def split_samples(
             })
             t = sample_end
             idx += 1
+
+    blocks: List[List[Dict[str, Any]]] = []
+    cur_block: List[Dict[str, Any]] = []
+    cur_len = timedelta(0)
+
+    for smp in samples:
+        smp_td = str_to_td(smp["length"])
+        if smp_td > timedelta(hours=MAX_READ_LENGTH):
+            if cur_block:
+                blocks.append(cur_block)
+                cur_block, cur_len = [], timedelta(0)
+            blocks.append([smp])
+            continue
+        if cur_block and cur_len + smp_td > timedelta(hours=MAX_READ_LENGTH):
+            blocks.append(cur_block)
+            cur_block, cur_len = [], timedelta(0)
+        cur_block.append(smp)
+        cur_len += smp_td
+    if cur_block:
+        blocks.append(cur_block)
+
+
+
+
     output_files = []
-    n_files = (len(samples) + max_samples_per_file - 1) // max_samples_per_file
+    for block in blocks:
+        for i in range(0, len(block), max_samples_per_file):
+            slice_samples = block[i:i + max_samples_per_file]
+            if slice_samples:
+                file_start_td = str_to_td(slice_samples[0]["start_time"])
+                last = slice_samples[-1]
+                file_end_td = str_to_td(last["start_time"])
+                file_length = file_end_td - file_start_td
+                file_length_str = td_to_str(file_length)
+            else:
+                file_length = "00:00:00"
+
+            output_files.append({
+                "output_filename": "TEMP",
+                "samples": slice_samples,
+                "file_length": file_length_str
+            })
+    total_files = len(output_files)
+    for i, f in enumerate(output_files, 1):
+        f["output_filename"] = f"{patient_id}_HRV_analysis_{i}_of_{total_files}"
+    logging.info(f"Generated %d samples -> %d files (<%dh per block)", len(samples), total_files, MAX_READ_LENGTH)
+
+    """n_files = (len(samples) + max_samples_per_file - 1) // max_samples_per_file
     logging.info(f"Splitting into {n_files} files with a maximum of  {max_samples_per_file} samples per file")
     for filenum in range(n_files):
         samples_in_file = samples[filenum * max_samples_per_file:(filenum + 1) * max_samples_per_file]
         # Beregn længde af optagelsen der dækkes i denne fil:
         if samples_in_file:
             # sidste samples slut: rel_start + length
-            def str_to_td(s):
-                h, m, s = map(int, s.split(":"))
-                return timedelta(hours=h, minutes=m, seconds=s)
 
             file_start_td = str_to_td(samples_in_file[0]["start_time"])
             last = samples_in_file[-1]
@@ -171,7 +220,8 @@ def split_samples(
             "output_filename": f"{patient_id}_HRV_analysis_{filenum + 1}_of_{n_files}",
             "samples": samples_in_file,
             "file_length": file_length_str
-        })
+        })"""
+
     return output_files
 
 
