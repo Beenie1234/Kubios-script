@@ -3,35 +3,30 @@ from datetime import timedelta
 from typing import List, Dict, Any, Tuple
 import logging
 
-from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE, MAX_READ_LENGTH
+from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE, MAX_READ_LENGTH, LOG_FILE
 
 DEFAULT_INTERVALS = DAY_INTERVALS
-
+logger = logging.getLogger(__name__)
 
 def parse_duration(duration_str: str) -> timedelta:
     h, m, s = map(int, duration_str.split(":"))
     return timedelta(hours=h, minutes=m, seconds=s)
 
-
 def parse_time_tuple(time_str):
-    parts = list(map(int, time_str.split(':')))
+    parts = list(map(int, re.split(r'[:.]', time_str)))
     while len(parts) < 3:
         parts.append(0)
-    return parts
+    return parts  # always h, m, s
 
 def str_to_td(s: str):
-    h, m, s = map(int, s.split(':'))
-    from datetime import timedelta
+    h, m, s = map(int, re.split(r'[:.]', s))
     return timedelta(hours=h, minutes=m, seconds=s)
 
-
 def td_to_str(td):
-    # timedelta til HH:MM:SS
     total_seconds = int(td.total_seconds())
     hours, remainder = divmod(total_seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     return f"{hours:02}:{minutes:02}:{seconds:02}"
-
 
 def interval_label(hour: int, intervals=None) -> str:
     if intervals is None:
@@ -43,10 +38,8 @@ def interval_label(hour: int, intervals=None) -> str:
         else:  # fx nat (23-7)
             if hour >= start or hour < end:
                 return label
-    logging.error("Error in interval_label function in analysis_logic.py")
+    logger.error("Ukendt klokkeslæt i interval_label")
     return "ukendt"
-
-
 
 def next_interval_end(current_time: timedelta, intervals=None) -> timedelta:
     if intervals is None:
@@ -72,8 +65,6 @@ def next_interval_end(current_time: timedelta, intervals=None) -> timedelta:
                 return interval_end
     return current_time + timedelta(hours=8)
 
-
-
 def split_samples(
         start_time: str,
         duration_str: str,
@@ -82,48 +73,35 @@ def split_samples(
         intervals: List[Tuple[str, int, int]] = None,
         sample_windows: List[Tuple[str, str]] = None
 ) -> List[Dict[str, Any]]:
-    logging.info(f"Splitting samples fpr {patient_id} with start time={start_time} and duration={duration_str}")
-    """
-    Fleksibel split: Hvis sample_windows er angivet, laves samples præcis efter windows, uanset overlap/spring.
-    Output er relativ tid fra optagelsens start samt længde, ikke absolut tidspunkt.
-    """
+    logger.info(f"Splitting samples for {patient_id}: start={start_time}, duration={duration_str}")
+
     h, m, s = map(int, re.split(r'[:.]', start_time))
-    print(f"h, m, s === {h, m, s}")
     start_offset = timedelta(hours=h, minutes=m, seconds=s)
     duration_td = parse_duration(duration_str)
     total_duration = start_offset + duration_td
     samples = []
     idx = 1
 
+    # ----------- custom windows -----------------------------------------
     if sample_windows:
-        logging.info(f"Using custom intervals: {sample_windows}")
         total_days = int(((duration_td + start_offset).total_seconds() // (24 * 3600))) + 1
         for day in range(total_days):
             for w_start, w_end in sample_windows:
                 sh, sm, ss = parse_time_tuple(w_start)
                 eh, em, es = parse_time_tuple(w_end)
+
+                # Calculate absolute window times for this day
                 window_start = timedelta(days=day, hours=sh, minutes=sm, seconds=ss)
                 window_end = timedelta(days=day, hours=eh, minutes=em, seconds=es)
-                # På dag 0: hvis window ligger før optagelsens start, klip til 0
-                if day == 0:
-                    sample_start = max(start_offset, window_start)
-                    sample_end = max(sample_start, window_end)  # sample_end kan ikke ligge før sample_start
-                else:
-                    sample_start = start_offset + (window_start - start_offset)
-                    sample_end = start_offset + (window_end - start_offset)
-                # Begræns til optagelsen!
-                if sample_end < start_offset:
-                    logging.debug(f"Custom sample end before recording start(skipped): {w_start}--{w_end} dag {day+1}")
+
+                # Adjust window to be within recording bounds
+                sample_start = max(start_offset, window_start)
+                sample_end = min(total_duration, window_end)  # ← Key fix: cap at total_duration
+
+                # Skip if window is invalid or outside bounds
+                if sample_start >= sample_end or sample_end <= start_offset:
                     continue
-                if sample_start < start_offset:
-                    logging.info(f"Custom sample start before recording start(clipped): {w_start}--{w_end} dag {day+1}")
-                    sample_start = start_offset
-                if sample_end > total_duration:
-                    logging.info(f"Custom sample end after recording end(clipped): {w_start}--{w_end} dag {day+1}")
-                    sample_end = total_duration
-                if sample_start >= sample_end or sample_start >= total_duration:
-                    logging.info(f"Sample start after recording end(skipped): {w_start}--{w_end} dag {day+1}")
-                    continue
+
                 rel_start = sample_start - start_offset
                 length = sample_end - sample_start
                 samples.append({
@@ -133,9 +111,9 @@ def split_samples(
                     "label": f"Dag {day + 1} {w_start}-{w_end}"
                 })
                 idx += 1
+    # ----------- default dag/aften/nat ----------------------------------
     else:
         t = start_offset
-        logging.info(f"Using default intervals: {intervals}")
         while t < total_duration:
             day_num = int((t.total_seconds() // (24 * 3600)) + 1)
             abs_hour = int((t.total_seconds() // 3600) % 24)
@@ -155,104 +133,110 @@ def split_samples(
             t = sample_end
             idx += 1
 
-    blocks: List[List[Dict[str, Any]]] = []
-    cur_block: List[Dict[str, Any]] = []
-    cur_len = timedelta(0)
-
+    # ----------- split samples that are too long -------------------------
+    split_samples_list = []
+    new_idx = 1
     for smp in samples:
         smp_td = str_to_td(smp["length"])
         if smp_td > timedelta(hours=MAX_READ_LENGTH):
-            if cur_block:
+            # split this sample into pieces of MAX_READ_LENGTH or less
+            seg_start = str_to_td(smp["start_time"])
+            seg_length = smp_td
+            while seg_length > timedelta():
+                cur_len = min(seg_length, timedelta(hours=MAX_READ_LENGTH))
+                split_samples_list.append({
+                    "index": new_idx,
+                    "start_time": td_to_str(seg_start),
+                    "length": td_to_str(cur_len),
+                    "label": smp["label"] + (f" ({td_to_str(seg_start)} - {td_to_str(seg_start + cur_len)})" if seg_length > timedelta(hours=MAX_READ_LENGTH) else "")
+                })
+                seg_start += cur_len
+                seg_length -= cur_len
+                new_idx += 1
+        else:
+            smp = smp.copy()
+            smp["index"] = new_idx
+            split_samples_list.append(smp)
+            new_idx += 1
+
+
+    # ----------- group split samples into ≤80 h blocks -------------------
+    blocks: List[List[Dict[str, Any]]] = []
+    cur_block: List[Dict[str, Any]] = []
+
+    for smp in split_samples_list:
+        # Calculate what the time span would be if we add this sample
+        if cur_block:
+            first_start = str_to_td(cur_block[0]["start_time"])
+            current_end = str_to_td(smp["start_time"]) + str_to_td(smp["length"])
+            total_span = current_end - first_start
+
+            if total_span > timedelta(hours=MAX_READ_LENGTH):
+                # Start a new block
                 blocks.append(cur_block)
-                cur_block, cur_len = [], timedelta(0)
-            blocks.append([smp])
-            continue
-        if cur_block and cur_len + smp_td > timedelta(hours=MAX_READ_LENGTH):
-            blocks.append(cur_block)
-            cur_block, cur_len = [], timedelta(0)
+                cur_block = []
+
         cur_block.append(smp)
-        cur_len += smp_td
+
     if cur_block:
         blocks.append(cur_block)
 
+    # ----------- reset start times for each block (except first) ---------
+    for block_idx, block in enumerate(blocks):
+        if block_idx == 0:
+            continue  # Keep original times for first block
+
+        if block:  # Make sure block is not empty
+            # Get the start time of the first sample in this block
+            first_sample_start = str_to_td(block[0]["start_time"])
+
+            # Adjust all samples in this block
+            for sample in block:
+                original_start = str_to_td(sample["start_time"])
+                new_start = original_start - first_sample_start
+                sample["start_time"] = td_to_str(new_start)
 
 
-
-    output_files = []
+    # ----------- slice blocks by max_samples_per_file, calculate file_length ---
+    output_files: List[Dict[str, Any]] = []
     for block in blocks:
         for i in range(0, len(block), max_samples_per_file):
             slice_samples = block[i:i + max_samples_per_file]
+            # Calculate total file length
             if slice_samples:
                 file_start_td = str_to_td(slice_samples[0]["start_time"])
                 last = slice_samples[-1]
-                file_end_td = str_to_td(last["start_time"])
+                file_end_td = str_to_td(last["start_time"]) + str_to_td(last["length"])
                 file_length = file_end_td - file_start_td
                 file_length_str = td_to_str(file_length)
             else:
-                file_length = "00:00:00"
-
+                file_length_str = "00:00:00"
             output_files.append({
                 "output_filename": "TEMP",
                 "samples": slice_samples,
                 "file_length": file_length_str
             })
+
     total_files = len(output_files)
     for i, f in enumerate(output_files, 1):
         f["output_filename"] = f"{patient_id}_HRV_analysis_{i}_of_{total_files}"
-    logging.info(f"Generated %d samples -> %d files (<%dh per block)", len(samples), total_files, MAX_READ_LENGTH)
 
-    """n_files = (len(samples) + max_samples_per_file - 1) // max_samples_per_file
-    logging.info(f"Splitting into {n_files} files with a maximum of  {max_samples_per_file} samples per file")
-    for filenum in range(n_files):
-        samples_in_file = samples[filenum * max_samples_per_file:(filenum + 1) * max_samples_per_file]
-        # Beregn længde af optagelsen der dækkes i denne fil:
-        if samples_in_file:
-            # sidste samples slut: rel_start + length
-
-            file_start_td = str_to_td(samples_in_file[0]["start_time"])
-            last = samples_in_file[-1]
-            file_end_td = str_to_td(last["start_time"]) + str_to_td(last["length"])
-            file_length = file_end_td - file_start_td
-            file_length_str = td_to_str(file_length)
-        else:
-            file_length_str = "00:00:00"
-        output_files.append({
-            "output_filename": f"{patient_id}_HRV_analysis_{filenum + 1}_of_{n_files}",
-            "samples": samples_in_file,
-            "file_length": file_length_str
-        })"""
-
+    logger.info("Generated %d samples → %d files (≤%dh pr blok)", len(split_samples_list), total_files, MAX_READ_LENGTH)
     return output_files
-
-
-# Eksempel på brug:
+# ------------------------------- quick self‑test ---------------------------
 if __name__ == "__main__":
-    # Brug windows (fx overlappende og ikke sammenhængende samples)
-    print("\nCUSTOM WINDOWS:\n")
-    sample_windows = [
-        ("07:00:00", "14:00:00"),
-        ("08:00:00", "15:00:00"),
-        ("09:00:00", "16:00:00")
-    ]
-    out = split_samples(
-        start_time="08.53.03",
-        duration_str="148:00:00",
-        patient_id="ID3",
-        sample_windows=sample_windows
-    )
-    for fil in out:
-        print(fil["output_filename"], "Optagelseslængde: ", fil["file_length"])
-        for s in fil["samples"]:
-            print(f"{s['index']}: {s['label']} start={s['start_time']} length={s['length']}")
+    logging.basicConfig(level=logging.INFO, filename=LOG_FILE)
+    print("CUSTOM WINDOWS:")
+    sample_windows = [("07:00:00", "15:00:00")]
+    out = split_samples("08:53:47", "147:00:00", "ID3", sample_windows=sample_windows)
+    for f in out:
+        print(f["output_filename"], f["file_length"])
+        for s in f["samples"]:
+            print(f"  {s['index']}: {s['label']} start={s['start_time']} length={s['length']}")
 
-    # Fortsat muligt at bruge klassisk mode (dag/aften/nat)
-    print("\nSTANDARD INTERVALLER:\n")
-    out2 = split_samples(
-        start_time="10:23:00",
-        duration_str="140:15:00",
-        patient_id="ID1"
-    )
-    for fil in out2:
-        print(fil["output_filename"], "Optagelseslængde:", fil["file_length"])
-        for s in fil["samples"]:
-            print(f"{s['index']}: {s['label']} start={s['start_time']} length={s['length']}")
+    print("\nSTANDARD INTERVALLER:")
+    out2 = split_samples("10:23:00", "140:15:00", "ID1")
+    for f in out2:
+        print(f["output_filename"], f["file_length"])
+        for s in f["samples"]:
+            print(f"  {s['index']}: {s['label']} start={s['start_time']} length={s['length']}")

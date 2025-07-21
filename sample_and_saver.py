@@ -138,6 +138,7 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
         pyautogui.hotkey("ctrl", "a")
         time.sleep(0.2)
         pyautogui.write(save_dir, interval=0.01)
+        pyautogui.hotkey("enter")
         filename_field = pyautogui.locateOnScreen(filename_img, confidence=0.8)
         time.sleep(0.5)
         if not filename_field:
@@ -155,6 +156,7 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
         time.sleep(0.2)
         click_center_left(save_cancel_btn)
         time.sleep(3)
+
         print("Results saved")
         return True
     except Exception as e:

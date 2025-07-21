@@ -12,6 +12,71 @@ from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
 
+def wait_for_loading_dialog_to_close(window_title_substring: str, hold_closed_seconds: float = 6.0,
+                                     timeout: float = 120.0, retry_interval: float = 1.0) -> bool:
+    start_time = time.time()
+    last_seen = None
+    window_ever_found = False
+
+    while time.time() - start_time < timeout:
+        try:
+            windows = Desktop(backend='uia').windows()
+            found = any(window_title_substring.lower() in w.window_text().lower() for w in windows)
+            now = time.time()
+
+            if found:
+                last_seen = now
+                window_ever_found = True
+                logging.debug(f"Window '{window_title_substring}' still open at {now}")
+            elif last_seen is not None:
+                # Window was previously seen but now closed
+                time_closed = now - last_seen
+                if time_closed >= hold_closed_seconds:
+                    logging.info(
+                        f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s (>= {hold_closed_seconds}s)")
+                    return True
+                else:
+                    logging.debug(
+                        f"Window '{window_title_substring}' closed for {time_closed:.1f}s, waiting for {hold_closed_seconds}s total")
+            elif not window_ever_found:
+                # Window was never found - this might be expected if it loads very quickly
+                logging.debug(f"Window '{window_title_substring}' not found, continuing to monitor...")
+
+        except Exception as e:
+            logging.error(f"Exception while waiting for loading dialog: {e}")
+            return False
+
+        time.sleep(retry_interval)
+
+    # If we never saw the window, that might be OK (it loaded quickly)
+    if not window_ever_found:
+        logging.info(f"Window '{window_title_substring}' was never detected - may have loaded quickly")
+        return True
+
+    # If we saw it but it never stayed closed long enough
+    logging.warning(f"Timeout: '{window_title_substring}' not closed for {hold_closed_seconds}s within {timeout}s")
+    return False
+
+
+def detect_open_data_file():
+    try:
+        open_data_file_label = None
+        for analysis_window in range(3):
+            print(f"trying to detect open data file dialog. Try no. {analysis_window+1}")
+            try:
+                open_data_file_label = pyautogui.locateOnScreen("assets/images/read_data_file.png", confidence=0.8)
+                if open_data_file_label is not None:
+                    return True
+                continue
+            except pyautogui.ImageNotFoundException as exc:
+                time.sleep(5)
+                continue
+        return False
+
+    except Exception as e:
+        logging.error(f"Failed to detect analysis window: {e}")
+        return False
+
 def detect_save_dialog():
     try:
         save_dialog_label = None
