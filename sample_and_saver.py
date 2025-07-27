@@ -4,7 +4,8 @@ import time
 
 from PIL import ImageGrab, ImageOps
 
-from analysis_driver import click_center_left, click_right_of, click_right_upper, detect_save_dialog
+from analysis_driver import click_center_left, click_right_of, click_right_upper, detect_save_dialog, \
+    wait_for_loading_dialog_to_close
 
 
 def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int, sample_name: str,
@@ -156,7 +157,7 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
         time.sleep(0.2)
         click_center_left(save_cancel_btn)
         time.sleep(3)
-
+        wait_for_loading_dialog_to_close("processing")
         print("Results saved")
         return True
     except Exception as e:

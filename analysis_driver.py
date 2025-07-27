@@ -34,6 +34,7 @@ def wait_for_loading_dialog_to_close(window_title_substring: str, hold_closed_se
                 if time_closed >= hold_closed_seconds:
                     logging.info(
                         f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s (>= {hold_closed_seconds}s)")
+                    print(f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s")
                     return True
                 else:
                     logging.debug(
@@ -41,6 +42,7 @@ def wait_for_loading_dialog_to_close(window_title_substring: str, hold_closed_se
             elif not window_ever_found:
                 # Window was never found - this might be expected if it loads very quickly
                 logging.debug(f"Window '{window_title_substring}' not found, continuing to monitor...")
+                print(f"Window '{window_title_substring}' not found, continuing to monitor...")
 
         except Exception as e:
             logging.error(f"Exception while waiting for loading dialog: {e}")

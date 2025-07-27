@@ -27,10 +27,7 @@ logging.basicConfig(filename=LOG_FILE,
 logger = logging.getLogger(__name__)
 
 
-
-
 def run_pipeline(cfg: Dict[str, str | List]) -> None:
-
 
     excel_path = Path(cfg["excel_path"])
     files_dir = Path(cfg["files_dir"])
@@ -38,6 +35,9 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     kubios_exe = Path(cfg["kubios_path"])
     intervals = cfg.get("day_intervals", DAY_INTERVALS)
+
+    # Get custom sample windows from config if they exist
+    sample_windows = cfg.get("sample_windows", None)
 
     success, failures = [], []
 
@@ -63,47 +63,80 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
                 raise RuntimeError(f"OCR failed: Start: {start_str}, Length: {length_str}")
             logger.info(f"OCR started: start: {start_str}, length: {length_str}")
 
-            # split til blokke ifølge optagelsen
-            blocks = split_samples(start_str, length_str, pid, MAX_SAMPLES_PER_FILE, intervals=intervals)
+            # FIXED: Issue 2 - Use None for intervals if they equal DEFAULT_INTERVALS
+            use_custom_intervals = cfg.get("use_custom_intervals", False)
+            intervals_param = None if not use_custom_intervals else intervals
 
-            for blk in blocks:
+            # split til blokke ifølge optagelsen - FIXED: Pass sample_windows parameter
+            blocks = split_samples(
+                start_str,
+                length_str,
+                pid,
+                MAX_SAMPLES_PER_FILE,
+                intervals=intervals_param,  # Use None for default behavior
+                sample_windows=sample_windows,  # Add this parameter
+                use_custom_intervals=use_custom_intervals  # Add this flag
+            )
 
-                if blocks.index(blk) != 0:
+            for blk_idx, blk in enumerate(blocks):
+
+                # FIXED: Reopen file for each block (not just non-first blocks)
+                if blk_idx != 0:
                     open_edf_file(edf)
+                    time.sleep(2)  # Give it time to load
 
                 first = blk["samples"][0]
                 last = blk["samples"][-1]
 
-                block_start_td = str_to_td(first["start_time"])
-                block_end_td = str_to_td(last["start_time"]) + str_to_td(last["length"])
-                block_len_td = block_end_td - block_start_td
-                block_len_str = td_to_str(block_len_td)
-                print(f"Block length: {block_len_str}")
+                # FIXED: Issue 1 - Use block_start_time and block_end_time (relative) for Kubios operations
+                block_start_str = first["block_start_time"]  # This is relative start time
+                block_end_str = first["block_end_time"]  # This is relative end time
 
-                read_all = (block_start_td.total_seconds() == 0 and block_len_str == length_str)
-                perform_read(read_all, first["start_time"], block_len_str if not read_all else None)
+                print(f"Block {blk_idx + 1} start: {block_start_str}, end: {block_end_str}")
+
+                # Check if we should read all (first block starting at 00:00:00 with end matching total length)
+                read_all = (block_start_str == "00:00:00" and block_end_str == length_str)
+
+                if detect_open_data_file():
+                    print("Detected 'open data file'-window")
+
+                # FIXED: Use block end time instead of block length
+                perform_read(read_all, block_start_str, block_end_str if not read_all else None)
                 time.sleep(2)
-                wait_for_loading_dialog_to_close('processing')
 
-                if detect_analysis_window():
-                    logger.info("Detected analysis window")
+                # FIXED: Only detect analysis window AFTER the read is complete
+                analysis_window_detected = False
+                for detection_try in range(10):  # Try multiple times
+                    if detect_analysis_window():
+                        logger.info("Detected analysis window")
+                        analysis_window_detected = True
+                        break
+                    time.sleep(1)
+
+                if not analysis_window_detected:
+                    logger.warning("Failed to detect analysis window, continuing anyway")
+
+                # Add samples - samples still use absolute time for display
                 for smp in blk["samples"]:
+                    print(f"Adding sample: {smp['start_time']}, {smp['length']}, {smp['index']}, {smp['label']}")
                     add_sample(smp["start_time"], smp["length"], smp["index"], smp["label"])
                     time.sleep(0.5)
 
-                save_results(str(output_dir), blk["output_filename"])
-                logging.info(f"Saved results for analysis to {blk['output_filename']}")
-                time.sleep(5)
-                wait_for_loading_dialog_to_close('processing')
-                time.sleep(4)
-                logging.info("loading dialog closed")
+                # FIXED: Better save dialog handling
+                try:
+                    save_results(str(output_dir), blk["output_filename"])
+                    logger.info(f"Saved results for analysis to {blk['output_filename']}")
+
+                except Exception as save_exc:
+                    logger.error(f"Save operation failed: {save_exc}")
+                    # Continue with next block even if save fails
+
                 if detect_analysis_error("error"):
                     raise RuntimeError("Kubios error popup")
+
             success.append(pid)
             close_kubios()
             time.sleep(2)
-
-
 
         except Exception as exc:
             logger.exception("Analysis of %s failed!", pid)
@@ -118,7 +151,6 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
                   f"Fails ({len(failures)}):\n {fail_txt}\n\n"
     logger.info(summary.replace("\n", " | "))
     messagebox.showinfo(title="Analysis", message=summary)
-
 
 
 if __name__ == "__main__":
