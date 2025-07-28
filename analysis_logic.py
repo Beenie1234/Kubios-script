@@ -239,8 +239,25 @@ def split_samples(
                 0] != last_sample:  # Only if we have multiple samples or it's not the same sample
                 last_sample = block[-1]
                 last_start_abs = str_to_td(last_sample["start_time"])
+                last_length = str_to_td(last_sample["length"])
                 new_last_start = last_start_abs - timedelta(seconds=1)
-                last_sample["start_time"] = td_to_str(new_last_start)
+
+                # CRITICAL FIX: Ensure the last sample doesn't exceed the recording duration
+                last_end_time = new_last_start + last_length
+                recording_end = start_offset + duration_td
+
+                if last_end_time > recording_end:
+                    # Adjust the length to fit within recording bounds
+                    adjusted_length = recording_end - new_last_start
+                    if adjusted_length > timedelta(0):
+                        last_sample["start_time"] = td_to_str(new_last_start)
+                        last_sample["length"] = td_to_str(adjusted_length)
+                        logger.info(f"Adjusted last sample length to fit recording: {td_to_str(adjusted_length)}")
+                    else:
+                        # If even the adjusted sample would be invalid, keep original
+                        logger.warning("Last sample adjustment would create invalid sample, keeping original")
+                else:
+                    last_sample["start_time"] = td_to_str(new_last_start)
 
         # Add block timing metadata to each sample for use in main.py
         for sample in block:

@@ -24,10 +24,10 @@ DAY_INTERVALS = [
     ("aften", 15, 23),
     ("nat", 23, 7)
 ]
-MAX_READ_LENGTH = 60
+MAX_READ_LENGTH = 50
 MAX_READ_LENGTH_SPLIT = 60
 MAX_SAMPLES_PER_FILE = 15
-
+BUFFER_HOURS = 0
 
 logging.basicConfig(
     level=logging.INFO,

@@ -1,25 +1,31 @@
-2025-07-27 18:47:32,772 - INFO - GUI: configuration saved – running pipeline
-2025-07-27 18:47:34,578 - INFO - Using column File Name as source for EDF-files
-2025-07-27 18:47:34,578 - INFO - Loaded 4 EDF-files from column File Name
-2025-07-27 18:47:35,370 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
-2025-07-27 18:47:35,371 - INFO - === Starting analysis of ID1_baseline ===
-2025-07-27 18:47:35,862 - INFO - Kubios is not running
-2025-07-27 18:47:35,862 - INFO - Attempting to start Kubios
-2025-07-27 18:47:45,872 - INFO - Kubios is running
-2025-07-27 18:47:45,872 - INFO - Kubios has been started
-2025-07-27 18:47:49,879 - INFO - No window found with the name 'kubioshrv'
-2025-07-27 18:47:49,879 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
-2025-07-27 18:48:05,015 - INFO - Starting to read time and length with Tesseract-OCR
-2025-07-27 18:48:06,233 - WARNING - OCR attempt 1 failed, trying again...
-2025-07-27 18:48:10,234 - INFO - Starting to read time and length with Tesseract-OCR
-2025-07-27 18:48:11,413 - WARNING - OCR attempt 2 failed, trying again...
-2025-07-27 18:48:15,414 - INFO - Starting to read time and length with Tesseract-OCR
-2025-07-27 18:48:17,455 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
-2025-07-27 18:48:17,455 - INFO - OCR started: start: 07.53.59, length: 147:45:37
-2025-07-27 18:48:17,455 - INFO - Splitting samples for ID1_baseline: start=07.53.59, duration=147:45:37
-2025-07-27 18:48:17,456 - INFO - Generated 19 samples \u2192 3 files (\u226460h pr blok)
-2025-07-27 18:48:50,984 - INFO - Detected analysis window
-2025-07-27 18:53:53,593 - INFO - Splitting samples for ID3: start=08:53:47, duration=147:00:00
-2025-07-27 18:53:53,594 - INFO - Generated 7 samples \u2192 3 files (\u226460h pr blok)
-2025-07-27 18:53:53,594 - INFO - Splitting samples for ID1 baseline: start=7:53:59, duration=147:45:37
-2025-07-27 18:53:53,596 - INFO - Generated 19 samples \u2192 3 files (\u226460h pr blok)
+2025-07-28 20:02:04,401 - INFO - GUI: configuration saved – running pipeline
+2025-07-28 20:02:06,660 - INFO - Using column File Name as source for EDF-files
+2025-07-28 20:02:06,660 - INFO - Loaded 4 EDF-files from column File Name
+2025-07-28 20:02:07,506 - INFO - Found 4 existing EDF-files out of 4. [] could not be resolved.
+2025-07-28 20:02:07,507 - INFO - === Starting analysis of ID1_baseline ===
+2025-07-28 20:02:08,058 - INFO - Kubios is not running
+2025-07-28 20:02:08,058 - INFO - Attempting to start Kubios
+2025-07-28 20:02:18,074 - INFO - Kubios is running
+2025-07-28 20:02:18,074 - INFO - Kubios has been started
+2025-07-28 20:02:22,081 - INFO - No window found with the name 'kubioshrv'
+2025-07-28 20:02:22,081 - INFO - Opening EDF file C:\Users\Mikkel\Desktop\Sven\Kubios_ny_ny\EDF_Files\ID1_baseline.edf
+2025-07-28 20:02:37,365 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-28 20:02:38,569 - WARNING - OCR attempt 1 failed, trying again...
+2025-07-28 20:02:42,569 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-28 20:02:43,760 - WARNING - OCR attempt 2 failed, trying again...
+2025-07-28 20:02:47,760 - INFO - Starting to read time and length with Tesseract-OCR
+2025-07-28 20:02:49,810 - INFO - Time: (866, 288, 911, 301). Length: (862, 301, 912, 316)
+2025-07-28 20:02:49,810 - INFO - OCR started: start: 07.53.59, length: 147:45:37
+2025-07-28 20:02:49,810 - INFO - Splitting samples for ID1_baseline: start=07.53.59, duration=147:45:37
+2025-07-28 20:02:49,812 - INFO - Generated 19 samples \u2192 4 files (\u226450h pr blok)
+2025-07-28 20:03:23,336 - INFO - Detected analysis window
+2025-07-28 20:04:32,818 - INFO - === LAST SAMPLE DIAGNOSTICS ===
+2025-07-28 20:04:32,819 - INFO - Recording start: 07.53.59
+2025-07-28 20:04:32,819 - INFO - Recording duration: 147:45:37
+2025-07-28 20:04:32,819 - INFO - Last sample: {'index': 6, 'start_time': '46:59:59', 'length': '08:00:00', 'label': 'Dag 2 nat', 'block_start_time': '00:00:00', 'block_end_time': '47:06:01'}
+2025-07-28 20:04:32,819 - INFO - Recording absolute end: 155:39:36
+2025-07-28 20:04:32,819 - INFO - Last sample start: 46:59:59
+2025-07-28 20:04:32,819 - INFO - Last sample length: 08:00:00
+2025-07-28 20:04:32,819 - INFO - Last sample end: 54:59:59
+2025-07-28 20:04:32,819 - INFO - Sample exceeds recording: False
+2025-07-28 20:04:32,819 - INFO - === END DIAGNOSTICS ===

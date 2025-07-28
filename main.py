@@ -124,6 +124,28 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
 
                 # FIXED: Better save dialog handling
                 try:
+                    last_sample = blk["samples"][-1]
+                    logger.info("=== LAST SAMPLE DIAGNOSTICS ===")
+                    logger.info(f"Recording start: {start_str}")
+                    logger.info(f"Recording duration: {length_str}")
+                    logger.info(f"Last sample: {last_sample}")
+
+                    # Calculate actual end times
+                    recording_start = str_to_td(start_str.replace('.', ':'))
+                    recording_duration = str_to_td(length_str)
+                    recording_absolute_end = recording_start + recording_duration
+
+                    last_sample_start = str_to_td(last_sample['start_time'])
+                    last_sample_length = str_to_td(last_sample['length'])
+                    last_sample_end = last_sample_start + last_sample_length
+
+                    logger.info(f"Recording absolute end: {td_to_str(recording_absolute_end)}")
+                    logger.info(f"Last sample start: {last_sample['start_time']}")
+                    logger.info(f"Last sample length: {last_sample['length']}")
+                    logger.info(f"Last sample end: {td_to_str(last_sample_end)}")
+                    logger.info(f"Sample exceeds recording: {last_sample_end > recording_absolute_end}")
+                    logger.info("=== END DIAGNOSTICS ===")
+
                     save_results(str(output_dir), blk["output_filename"])
                     logger.info(f"Saved results for analysis to {blk['output_filename']}")
 
