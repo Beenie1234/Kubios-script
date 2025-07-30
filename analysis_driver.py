@@ -12,11 +12,17 @@ from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, get_pid_by_name
 
 
-def wait_for_loading_dialog_to_close(window_title_substring: str, hold_closed_seconds: float = 6.0,
-                                     timeout: float = 120.0, retry_interval: float = 1.0) -> bool:
+def wait_for_window_closed(window_title_substring: str, hold_closed_seconds: float = 6.0,
+                           timeout: float = 120.0, retry_interval: float = 1.0) -> bool:
+    """
+    Wait for a window to not be open (and stay closed for hold_closed_seconds).
+
+    Returns:
+        True if window is not open (either never found or closed for hold_closed_seconds)
+        False if timeout reached while window is still open or error occurred
+    """
     start_time = time.time()
-    last_seen = None
-    window_ever_found = False
+    first_closed_time = None
 
     while time.time() - start_time < timeout:
         try:
@@ -25,41 +31,41 @@ def wait_for_loading_dialog_to_close(window_title_substring: str, hold_closed_se
             now = time.time()
 
             if found:
-                last_seen = now
-                window_ever_found = True
-                logging.debug(f"Window '{window_title_substring}' still open at {now}")
-            elif last_seen is not None:
-                # Window was previously seen but now closed
-                time_closed = now - last_seen
-                if time_closed >= hold_closed_seconds:
-                    logging.info(
-                        f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s (>= {hold_closed_seconds}s)")
-                    print(f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s")
-                    return True
+                # Window is open - reset the closed timer
+                first_closed_time = None
+                logging.debug(f"Window '{window_title_substring}' is still open at {now}")
+            else:
+                # Window is not found
+                if first_closed_time is None:
+                    # First time we noticed it's closed
+                    first_closed_time = now
+                    logging.debug(f"Window '{window_title_substring}' first detected as closed at {now}")
                 else:
-                    logging.debug(
-                        f"Window '{window_title_substring}' closed for {time_closed:.1f}s, waiting for {hold_closed_seconds}s total")
-            elif not window_ever_found:
-                # Window was never found - this might be expected if it loads very quickly
-                logging.debug(f"Window '{window_title_substring}' not found, continuing to monitor...")
-                print(f"Window '{window_title_substring}' not found, continuing to monitor...")
+                    # Window has been closed for some time
+                    time_closed = now - first_closed_time
+                    if time_closed >= hold_closed_seconds:
+                        logging.info(
+                            f"Window '{window_title_substring}' has been closed for {time_closed:.1f}s (>= {hold_closed_seconds}s)")
+                        return True
+                    else:
+                        logging.debug(
+                            f"Window '{window_title_substring}' closed for {time_closed:.1f}s, waiting for {hold_closed_seconds}s total")
 
         except Exception as e:
-            logging.error(f"Exception while waiting for loading dialog: {e}")
+            logging.error(f"Exception while checking window status: {e}")
             return False
 
         time.sleep(retry_interval)
 
-    # If we never saw the window, that might be OK (it loaded quickly)
-    if not window_ever_found:
-        logging.info(f"Window '{window_title_substring}' was never detected - may have loaded quickly")
-        return True
-
-    # If we saw it but it never stayed closed long enough
-    logging.warning(f"Timeout: '{window_title_substring}' not closed for {hold_closed_seconds}s within {timeout}s")
-    return False
-
-
+    # Timeout reached
+    if first_closed_time is None:
+        logging.warning(f"Timeout: Window '{window_title_substring}' was still open after {timeout}s")
+        return False
+    else:
+        time_closed = time.time() - first_closed_time
+        logging.warning(
+            f"Timeout: Window '{window_title_substring}' was closed for {time_closed:.1f}s but didn't reach {hold_closed_seconds}s within {timeout}s timeout")
+        return False
 def detect_open_data_file():
     try:
         open_data_file_label = None
@@ -105,6 +111,10 @@ def detect_analysis_window():
             analysis_window_label = None
             for analysis_window in range(25):
                 print(f"trying to detect analysis window. Try no. {analysis_window}")
+                if detect_analysis_error("error"):  # press enter if error when opening HRV recording
+                    logging.error(f"Error encountered when attempting to open EDF file")
+                    bring_kubios_to_front("kubios", "error")
+                    pyautogui.hotkey('enter')
                 try:
                     analysis_window_label = pyautogui.locateOnScreen("assets/images/analysis_window.png", confidence=0.8)
                     if analysis_window_label is not None:

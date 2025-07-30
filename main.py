@@ -10,13 +10,14 @@ import logging, time
 from pathlib import Path
 from typing import Dict, List, Any
 from tkinter import messagebox
+import pyautogui
 
 from config import CONFIG, LOG_FILE, DAY_INTERVALS, MAX_SAMPLES_PER_FILE
 from file_io import read_edf_list, resolve_edf_paths
 from kubios_control import open_kubios, bring_kubios_to_front, close_kubios
 from analysis_driver import (open_edf_file, perform_read,
                              detect_analysis_error, read_time_and_length, detect_analysis_window, detect_save_dialog,
-                             detect_open_data_file, wait_for_loading_dialog_to_close)
+                             detect_open_data_file)
 from sample_and_saver import add_sample, save_results
 from analysis_logic import split_samples, td_to_str, str_to_td
 
@@ -104,9 +105,11 @@ def run_pipeline(cfg: Dict[str, str | List]) -> None:
                 perform_read(read_all, block_start_str, block_end_str if not read_all else None)
                 time.sleep(2)
 
+
                 # FIXED: Only detect analysis window AFTER the read is complete
                 analysis_window_detected = False
                 for detection_try in range(10):  # Try multiple times
+
                     if detect_analysis_window():
                         logger.info("Detected analysis window")
                         analysis_window_detected = True

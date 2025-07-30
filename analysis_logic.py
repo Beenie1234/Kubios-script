@@ -3,7 +3,8 @@ from datetime import timedelta
 from typing import List, Dict, Any, Tuple
 import logging
 
-from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE, MAX_READ_LENGTH, LOG_FILE
+from config import DAY_INTERVALS, MAX_SAMPLES_PER_FILE, MAX_READ_LENGTH, LOG_FILE, \
+    FIRST_SAMPLE_BUFFER_SECONDS
 
 DEFAULT_INTERVALS = DAY_INTERVALS
 logger = logging.getLogger(__name__)
@@ -225,22 +226,23 @@ def split_samples(
             first_length = str_to_td(first_sample["length"])
 
             # Only apply offset if the first sample starts exactly at block start
+
             if first_start_abs == first_sample_abs:
-                new_first_start = first_start_abs + timedelta(seconds=1)
-                new_first_length = first_length - timedelta(seconds=1)
+                new_first_start = first_start_abs + timedelta(seconds=FIRST_SAMPLE_BUFFER_SECONDS)
+                new_first_length = first_length - timedelta(seconds=FIRST_SAMPLE_BUFFER_SECONDS)
 
                 # Ensure length doesn't go negative
                 if new_first_length > timedelta(0):
                     first_sample["start_time"] = td_to_str(new_first_start)
                     first_sample["length"] = td_to_str(new_first_length)
 
-            # Last sample: start 1 second earlier (but keep original label and length)
+            # Last sample: start 2 seconds earlier (but keep original label and length)
             if len(block) > 1 or block[
                 0] != last_sample:  # Only if we have multiple samples or it's not the same sample
                 last_sample = block[-1]
                 last_start_abs = str_to_td(last_sample["start_time"])
                 last_length = str_to_td(last_sample["length"])
-                new_last_start = last_start_abs - timedelta(seconds=1)
+                new_last_start = last_start_abs - timedelta(seconds=2)
 
                 # CRITICAL FIX: Ensure the last sample doesn't exceed the recording duration
                 last_end_time = new_last_start + last_length

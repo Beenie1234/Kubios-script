@@ -5,7 +5,7 @@ import time
 from PIL import ImageGrab, ImageOps
 
 from analysis_driver import click_center_left, click_right_of, click_right_upper, detect_save_dialog, \
-    wait_for_loading_dialog_to_close
+ detect_analysis_error, wait_for_window_closed
 
 
 def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int, sample_name: str,
@@ -80,7 +80,9 @@ def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int
 
             time.sleep(0.2)
             click_center_left(ok_cancel_btn)
-            time.sleep(0.2)
+            time.sleep(2)
+
+        wait_for_window_closed("processing")
 
         try:
             sample_tag = pyautogui.locateOnScreen("assets/images/color_label.png", confidence=0.8)
@@ -100,7 +102,7 @@ def add_sample(start_time: str, length_time: str, sample_number_in_sequence: int
         time.sleep(0.5)
         pyautogui.write(sample_name, interval=0.01)
         time.sleep(0.5)
-
+        wait_for_window_closed("processing")
 
 
 
@@ -156,8 +158,8 @@ def save_results(save_dir: str, filename: str, save_cancel_img: str = "assets/im
             raise RuntimeError(f"Could not find save cancel button")
         time.sleep(0.2)
         click_center_left(save_cancel_btn)
-        time.sleep(3)
-        wait_for_loading_dialog_to_close("processing")
+        time.sleep(0.2)
+        wait_for_window_closed("processing")
         print("Results saved")
         return True
     except Exception as e:
