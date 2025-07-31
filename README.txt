@@ -17,3 +17,5 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocola
 
 6. In the same prompt, now run this command "choco install -y tesseract" and verify installation with "tesseract --version"
 
+7. run main.py
+
