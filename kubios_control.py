@@ -1,3 +1,8 @@
+"""kubios_control.py
+Dette modul styrer åbning, lukning og fokus af Kubios
+
+"""
+
 import os
 import subprocess
 import psutil

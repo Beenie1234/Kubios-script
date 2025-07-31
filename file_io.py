@@ -1,3 +1,9 @@
+"""file_io.py
+benyttes til at håndtere EDF-listen + paths
+
+"""
+
+
 from pathlib import Path
 import pandas as pd
 import logging

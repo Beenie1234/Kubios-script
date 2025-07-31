@@ -1,3 +1,8 @@
+"""
+
+Dette modul styrer selve analysen og interaktionen med Kubios programmet
+"""
+
 import logging
 import time
 import pytesseract

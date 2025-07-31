@@ -2,7 +2,9 @@ import json
 import os
 from pathlib import Path
 import logging
-
+"""config.py
+Config-fil med standard-værdier til brug i resten af scriptet
+"""
 
 #Standard-config som fallback
 DEFAULTS = {
@@ -13,7 +15,6 @@ DEFAULTS = {
     "files_dir": str(Path(__file__).parent.parent)
 }
 
-#EXCEL_PATH = r"C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx"
 STARTUP_DELAY = 10
 LOG_FILE ='kubios_automation.log'
 PROCESS_NAME = "kubioshrv"
