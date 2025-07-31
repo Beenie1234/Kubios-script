@@ -1,3 +1,8 @@
+"""kubios_control.py
+Dette modul styrer åbning, lukning og fokus af Kubios
+
+"""
+
 import os
 import subprocess
 import psutil
@@ -57,11 +62,13 @@ def bring_kubios_to_front(process_name=PROCESS_NAME, title_keyword=TITLE_KEYWORD
         for handle in window_handles:
             win = Desktop(backend="uia").window(handle=handle)
             title = win.window_text()
-
+            print(f"Title_keyword : {str(title_keyword)}")
+            print(f" title: {str(title)}")
             if title_keyword.lower() in title.lower():
                 matching_windows.append(win)
             else:
                 fallback_windows.append(win)
+                logging.info(f"Not able to find main window. Found window: {title}" )
 
         #Denne del af koden åbner Kubios
         for win in matching_windows + fallback_windows:
@@ -82,20 +89,25 @@ def bring_kubios_to_front(process_name=PROCESS_NAME, title_keyword=TITLE_KEYWORD
         return False
     return False
 
-def open_kubios():
+def open_kubios(kubios_path=KUBIOS_PATH):
     if is_kubios_running():
         logging.info("Kubios is already running")
+        time.sleep(5)
         return bring_kubios_to_front()
 
-    if not os.path.exists(KUBIOS_PATH):
-        logging.info(f"Path: {KUBIOS_PATH} does not exist")
+    if not os.path.exists(kubios_path):
+        logging.info(f"Path: {kubios_path} does not exist")
         return False
 
     logging.info(f"Attempting to start Kubios")
     try:
-        subprocess.Popen([KUBIOS_PATH], stdin=subprocess.DEVNULL,
+        for open_try in range(6):
+
+            subprocess.Popen([kubios_path], stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        time.sleep(STARTUP_DELAY)
+            time.sleep(STARTUP_DELAY)
+            if is_kubios_running():
+                break
         logging.info("Kubios has been started")
         return True
     except Exception as e:

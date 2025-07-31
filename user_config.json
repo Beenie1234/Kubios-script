@@ -1,3 +1,21 @@
 {
-  "kubios_path": "C:\\Program Files\\Kubios\\Kubios HRV Premium\\kubioshrv.exe"
-  }
+  "kubios_path": "C:/Program Files/Kubios/Kubios HRV Premium/kubioshrv.exe",
+  "day_intervals": [
+    [
+      "dag",
+      7,
+      15
+    ],
+    [
+      "aften",
+      15,
+      23
+    ],
+    [
+      "nat",
+      23,
+      7
+    ]
+  ],
+  "use_custom_intervals": false
+}

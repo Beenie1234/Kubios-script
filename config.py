@@ -2,21 +2,34 @@ import json
 import os
 from pathlib import Path
 import logging
-#config filer + logging
-
+"""config.py
+Config-fil med standard-værdier til brug i resten af scriptet
+"""
 
 #Standard-config som fallback
 DEFAULTS = {
     "kubios_path": r'C:\Program Files\Kubios\KubiosHRVScientific\application\launch_kubioshrv.exe',
     "excel_path": str(Path(__file__).parent.parent / "Files_to_analyze.xlsx"),
-    "log_file": str(Path(__file__) / "kubios_automation.log")
+    "log_file": str(Path(__file__) / "kubios_automation.log"),
+    "output_dir": str(Path(__file__).parent.parent / "Output"),
+    "files_dir": str(Path(__file__).parent.parent)
 }
 
-#EXCEL_PATH = r"C:\Users\canno\OneDrive - University of Copenhagen\Skrivebord\Sven\EDF_Auto_Analyze\Files_to_analyze.xlsx"
-STARTUP_DELAY = 60
+STARTUP_DELAY = 10
 LOG_FILE ='kubios_automation.log'
 PROCESS_NAME = "kubioshrv"
 TITLE_KEYWORD = "Kubios"
+
+DAY_INTERVALS = [
+    ("dag", 7, 15),
+    ("aften", 15, 23),
+    ("nat", 23, 7)
+]
+MAX_READ_LENGTH = 50
+MAX_READ_LENGTH_SPLIT = 60
+MAX_SAMPLES_PER_FILE = 15
+BUFFER_HOURS = 0
+FIRST_SAMPLE_BUFFER_SECONDS = 5
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,5 +57,7 @@ CONFIG = load_config()
 KUBIOS_PATH = CONFIG["kubios_path"]
 EXCEL_PATH = CONFIG["excel_path"]
 LOG_FILE = CONFIG["log_file"]
+OUTPUT_DIR = CONFIG["output_dir"]
+FILES_DIR = CONFIG["files_dir"]
 
 
