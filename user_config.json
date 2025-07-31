@@ -1,8 +1,5 @@
 {
-  "excel_path": "C:/Users/Mikkel/Desktop/Sven/Kubios_ny_ny/Files_to_analyze.xlsx",
   "kubios_path": "C:/Program Files/Kubios/Kubios HRV Premium/kubioshrv.exe",
-  "files_dir": "C:/Users/Mikkel/Desktop/Sven/Kubios_ny_ny/EDF_Files",
-  "output_dir": "C:\\Users\\Mikkel\\Desktop\\Sven\\Kubios_ny_ny\\Output",
   "day_intervals": [
     [
       "dag",
